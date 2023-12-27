@@ -1,0 +1,41 @@
+div.div-track-shipment {
+  background-color: var(--color-white);
+  padding: 15px;
+  margin-top: 12%;
+  border-radius: 5px;
+}
+
+div.div-track-shipment > span {
+  font-size: 13px;
+  color: var(--color-light-gray);
+}
+
+div.div-track-shipment > input {
+  width: 80%;
+}
+
+.btn-track {
+  margin-left: 10px;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  div.div-track-shipment {
+    margin-top: 18% !important;
+  }
+
+  div.div-track-shipment > input {
+    width: 100%;
+  }
+
+  .btn-track {
+    margin-left: 0px !important;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1550px) {
+  div.div-track-shipment {
+    margin-top: 7% !important;
+  }
+}

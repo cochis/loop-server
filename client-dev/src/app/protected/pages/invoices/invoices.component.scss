@@ -1,0 +1,20 @@
+div.dashboard-container div.invoices-table {
+  background-color: var(--color-white);
+}
+
+img {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+}
+
+button.btn.btn-link.fs-12 {
+  text-decoration: unset !important;
+  cursor: pointer;
+  color: var(--color-dark-gray);
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-dark-gray);
+  }
+}

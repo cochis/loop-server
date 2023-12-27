@@ -1,0 +1,50 @@
+<div class="div-services">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>
+          <b>{{ "services.title" | translate | uppercase }}</b>
+        </h2>
+        <br>
+        <p-carousel
+          [value]="services"
+          [numVisible]="3"
+          [numScroll]="1"
+          [circular]="true"
+          [autoplayInterval]="3000"
+          [responsiveOptions]="responsiveOptions"
+          [showIndicators]="true"
+          [showNavigators]="false"
+        >
+          <ng-template let-service pTemplate="item">
+            <div class="service-item">
+              <img class="icon-service" [src]="'/assets/img/icon_service' + service + '.png'"/>
+              <h5>
+                {{ "services.service" + service + "_short" | translate | uppercase }}
+              </h5>
+              <br />
+              <p class="text-justify">
+                {{
+                  ("services.service" + service + "_desc" | translate).length >
+                  100
+                    ? (
+                        "services.service" + service + "_desc" | translate
+                      ).substring(0, 100) + "..."
+                    : ("services.service" + service + "_desc" | translate)
+                }}
+              </p>
+              <br />
+              <a
+                nghref="#"
+                class="btn btn-outline-info btn-more"
+                [routerLink]="['/home/services', service]"
+              >
+                {{ "services.click_here" | translate | uppercase }}
+              </a>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+    </div>
+  </div>
+</div>

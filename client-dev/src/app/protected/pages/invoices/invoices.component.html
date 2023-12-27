@@ -1,0 +1,77 @@
+<div class="dashboard-container">
+  <div class="main-container container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="relative">
+          <a nghref="#" class="mb-5 block black" [routerLink]="['/dashboard']">
+            <i class="fa fa-chevron-left"></i>
+            {{ "quotation.back_button" | translate | uppercase }}
+          </a>
+          <h3 class="bold mb-5">
+            {{ "dashboard.invoices_title" | translate | uppercase }}
+          </h3>
+
+          <img src="/assets/img/icon-invoices-off.png" />
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="invoices-table">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <br />
+          <p-table [value]="invoices" [paginator]="true" [rows]="7">
+            <ng-template pTemplate="header">
+              <tr>
+                <th class="fs-14">
+                  {{ "invoices.invoice_number_column" | translate | uppercase }}
+                </th>
+                <th class="fs-14">
+                  {{ "invoices.quote_number_column" | translate | uppercase }}
+                </th>
+                <th></th>
+                <th></th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-invoice>
+              <tr>
+                <td>
+                  <a nghref="#" class="blue" class="fs-14">{{
+                    invoice.idStr
+                  }}</a>
+                </td>
+                <td>
+                  {{ invoice.quoteNumber }}
+                </td>
+                <td class="fs-14" style="width: 15%;">
+                  <button
+                    type="button"
+                    class="btn btn-link fs-12"
+                    [disabled]="!invoice.urlXML"
+                  >
+                    {{ "invoices.xml_button" | translate | uppercase }}
+                  </button>
+                </td>
+                <td class="fs-14" style="width: 15%;">
+                  <button
+                    type="button"
+                    class="btn btn-link fs-12"
+                    [disabled]="!invoice.urlPDF"
+                  >
+                    {{ "invoices.pdf_button" | translate | uppercase }}
+                  </button>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+          <br /><br />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

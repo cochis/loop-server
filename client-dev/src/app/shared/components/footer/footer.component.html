@@ -1,0 +1,58 @@
+<!--FOOTER-->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-4">
+        | {{ "services.title" | translate | uppercase }}
+        <ul>
+          <li *ngFor="let service of services">
+            <a nghref="#" [routerLink]="['/home/services/', service]">{{
+              "services.service" + service | translate | uppercase
+            }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-4">
+        | {{ "footer.tools_title" | translate | uppercase }}
+        <ul>
+          <li *ngIf="loggedUser">
+            <a nghref="#" [routerLink]="['/dashboard']">{{
+              "nav_bar.my_profile" | translate | uppercase
+            }}</a>
+          </li>
+          <li>
+            <a nghref="#" [routerLink]="['/dashboard/quote-service']">{{ "nav_bar.quote" | translate | uppercase }}</a>
+          </li>
+          <li>
+            <a routerLink="/" (click)="navigateToSection('main-container', -120)">
+              {{ "nav_bar.tracking" | translate | uppercase }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-4">
+        | {{ "footer.resources_title" | translate | uppercase }}
+        <ul>
+          <li>
+            <a routerLink="/home/contact">{{ "footer.contact_option" | translate | uppercase }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-12 language-section">
+        <app-language-selector></app-language-selector>
+        <div class="logo-section mb-5">
+          <a style="cursor: pointer; display: inline-block" href="https://mx.linkedin.com/company/loopintermodal" target="_blank">
+            <img src="/assets/img/email.png" />
+          </a>
+          <a style="cursor: pointer; display: inline-block" href="https://www.instagram.com/loop_intermodal/" target="_blank">
+            <img src="/assets/img/instagram.png" />
+          </a>
+          <a style="cursor: pointer; display: inline-block" href="https://www.facebook.com/modaloop/" target="_blank">
+            <img src="/assets/img/facebook.png" />
+          </a>
+        </div>
+        <img src="/assets/img/logo.png" class="pointer" (click)="navigateToSection('main-container', -120)"/>
+      </div>
+    </div>
+  </div>
+</div>

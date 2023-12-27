@@ -1,0 +1,131 @@
+<div class="dashboard-container" *ngIf="dashboardInfo">
+  <div class="main-container container">
+    <div class="row">
+      <div class="col-md-5 col-12">
+        <div class="header-dashboard" *ngIf="loggedUser">
+          <h1 class="bold">
+            {{ "dashboard.welcome_title" | translate | uppercase }},
+          </h1>
+          <p class="mb-0">{{ loggedUser.name | uppercase }} {{ loggedUser.lastName | uppercase }}</p>
+          <p>{{ loggedUser.company | uppercase }}</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-12">&nbsp;</div>
+      <div class="col-md-5 col-12">
+        <div class="tracking-container">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'dashboard.tracking_number' | translate }}"
+            />
+            <button class="btn btn-primary" type="button">
+              {{ "dashboard.tracking_button" | translate | uppercase }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-cards-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="bold mb-3">
+            {{ "dashboard.dashboard_title" | translate | uppercase }}
+          </h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <!--QUOTATIONS-->
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="dashboard-card">
+            <p class="mb-0 title">
+              {{ "dashboard.quotations_title" | translate | uppercase }}
+            </p>
+            <p class="bold number mb-0">{{ dashboardInfo.quotations }}</p>
+            <p *ngIf="dashboardInfo.shipmentsInProgress > 0">&nbsp;</p>
+            <img class="icon" src="/assets/img/icon-quotations.png" />
+            <hr />
+            <a
+              nghref="#"
+              [routerLink]="['/dashboard/quotations']"
+              class="btn btn-dark w-100"
+              >{{ "dashboard.view_button" | translate | uppercase }}</a
+            >
+          </div>
+        </div>
+
+        <!--SHIPMENTS-->
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="dashboard-card">
+            <p class="mb-0 title">
+              {{ "dashboard.shipments_title" | translate | uppercase }}
+            </p>
+            <p class="bold number mb-0">{{ dashboardInfo.shipments }}</p>
+            <p *ngIf="dashboardInfo.shipmentsInProgress > 0">
+              <i class="fa fa-check-circle-o text-success"></i>
+              {{ dashboardInfo.shipmentsInProgress }}
+              <span *ngIf="dashboardInfo.shipmentsInProgress == 1">{{
+                "dashboard.one_shipment_in_progress" | translate
+              }}</span>
+              <span *ngIf="dashboardInfo.shipmentsInProgress > 1">{{
+                "dashboard.more_shipment_in_progress" | translate
+              }}</span>
+            </p>
+            <img class="icon" src="/assets/img/icon-shipments.png" />
+            <hr />
+            <a
+              nghref="#"
+              [routerLink]="['/dashboard/shipments']"
+              class="btn btn-dark w-100"
+              >{{ "dashboard.view_button" | translate | uppercase }}</a
+            >
+          </div>
+        </div>
+
+        <!--INVOICES-->
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="dashboard-card">
+            <p class="mb-0 title">
+              {{ "dashboard.invoices_title" | translate | uppercase }}
+            </p>
+            <p class="bold number mb-0">{{ dashboardInfo.invoices }}</p>
+            <p *ngIf="dashboardInfo.shipmentsInProgress > 0">&nbsp;</p>
+            <img class="icon" src="/assets/img/icon-invoices.png" />
+            <hr />
+            <a
+              nghref="#"
+              [routerLink]="['/dashboard/invoices']"
+              class="btn btn-dark w-100"
+              >{{ "dashboard.view_button" | translate | uppercase }}</a
+            >
+          </div>
+        </div>
+
+        <!--NOTIFICATIONS-->
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="dashboard-card">
+            <p class="mb-0 title">
+              {{ "dashboard.notifications_title" | translate | uppercase }}
+            </p>
+            <p class="bold number mb-0">{{ dashboardInfo.notifications }}</p>
+            <p *ngIf="dashboardInfo.shipmentsInProgress > 0">&nbsp;</p>
+            <img class="icon" src="/assets/img/icon-notifications.png" />
+            <hr />
+            <a
+              nghref="#"
+              [routerLink]="['/dashboard/notifications']"
+              class="btn btn-dark w-100"
+              >{{ "dashboard.view_button" | translate | uppercase }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

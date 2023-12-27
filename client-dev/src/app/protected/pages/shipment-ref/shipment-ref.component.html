@@ -1,0 +1,9 @@
+<div class="dashboard-container">
+  <div class="main-container container">
+    <div class="shipment-ref">
+      <ng-container *ngIf="shipment">
+        <app-shipment-detail [shipmentDetail]="shipment" [transparent]="true"></app-shipment-detail>
+      </ng-container>
+    </div>
+  </div>
+</div>

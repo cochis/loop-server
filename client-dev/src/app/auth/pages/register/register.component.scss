@@ -1,0 +1,13 @@
+ul.dropdown-menu img {
+  width: 25px;
+}
+
+button.btn-prefix {
+  color: #6c757d;
+  border-color: #ced4da;
+}
+
+button.btn-prefix:hover,
+button.btn.btn-prefix.show {
+  color: var(--color-white) !important;
+}

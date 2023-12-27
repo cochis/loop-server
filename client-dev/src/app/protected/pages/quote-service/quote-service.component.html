@@ -1,0 +1,116 @@
+<div class="dashboard-container">
+  <div class="main-container container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="relative">
+          <a nghref="#" class="mb-5 block black">
+            &nbsp;
+          </a>
+          <h3 class="bold mb-4">
+            {{ 'quotes.title' | translate | uppercase }}
+          </h3>
+          <p>
+            {{ 'quotes.subtitle' | translate }}
+          </p>
+
+          <img src="/assets/img/icon-quotations-off.png" />
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="quotations-service">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5>
+            <b>
+              {{ 'quotes.how_help' | translate | uppercase }}
+            </b>
+          </h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.first_name' | translate }} *"/>
+        </div>
+        <div class="col-md-4 col-12">
+          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.business' | translate }} *"/>
+        </div>
+        <div class="col-md-4 col-12">
+          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.email' | translate }} *"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.origin' | translate }}"/>
+        </div>
+        <div class="col-md-4 col-12">
+          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.destiny' | translate }}"/>
+        </div>
+        <div class="col-md-4 col-12">
+          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.type_merchandise' | translate }}"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.quantity' | translate }}"/>
+        </div>
+        <div class="col-md-4 col-12">
+          <select class="form-control mt-4">
+            <option>{{ 'quotes.type_service' | translate }}</option>
+          </select>
+        </div>
+        <div class="col-md-4 col-12">
+          <select class="form-control mt-4">
+            <option>{{ 'quotes.incoterm' | translate }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <textarea class="form-control mt-4" placeholder="{{ 'quotes.special_request' | translate }}"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button type="button" class="btn btn-primary btn-lg mt-4 mb-4">{{ 'quotes.submit' | translate | uppercase }}</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <div class="mt-4 card-info">
+            <h4>
+              <img src="/assets/img/phone.png"/>
+              {{ 'quotes.phone' | translate | uppercase }}
+            </h4>
+            <p>
+              <span>MEX</span>
+              +52 (556) 826 3041
+            </p>
+            <p>
+              <span>{{ 'quotes.us' | translate | uppercase }}</span>
+              +1 (305) 564 1315
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-12">
+          <div class="mt-4 card-info">
+            <h4>
+              <img src="/assets/img/email2.png"/>
+              {{ 'quotes.email' | translate | uppercase }}
+            </h4>
+            <p>
+              info@loopintermodal.com
+            </p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

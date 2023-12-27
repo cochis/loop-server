@@ -1,0 +1,109 @@
+li.nav-item {
+  font-size: 12px !important;
+}
+
+nav.navbar div.d-flex > div > ul > li > a {
+  margin-left: 30px;
+}
+
+nav.navbar {
+  background-color: transparent !important;
+}
+
+nav.navbar.inverse {
+  background-color: var(--color-light-gray-2) !important;
+  border-bottom: 1px solid var(--color-light-gray-3);
+}
+
+nav.navbar.dashboard {
+  background-color: transparent !important;
+  border-bottom: unset !important;
+}
+
+nav.navbar.dashboard a.nav-link,
+nav.navbar.dashboard i.fa.fa-chevron-down {
+  color: var(--color-black);
+}
+
+nav.navbar.inverse.dashboard {
+  background-color: var(--color-light-gray-2) !important;
+  border-bottom: 1px solid var(--color-light-gray-3) !important;
+}
+
+a.nav-link,
+i.fa.fa-chevron-down {
+  cursor: pointer !important;
+  color: var(--color-white);
+}
+
+nav.navbar.inverse a.nav-link,
+nav.navbar.inverse i.fa.fa-chevron-down {
+  color: var(--color-black);
+}
+
+.inline-block {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+div.navbar-collapse ul.navbar-nav {
+  float: right;
+}
+
+a.nav-link.divider {
+  cursor: inherit !important;
+  user-select: none;
+}
+
+button > i.fa.fa-bars {
+  color: var(--color-white) !important;
+}
+
+nav.navbar.dashboard button > i.fa.fa-bars {
+  color: var(--color-dark-gray) !important;
+}
+
+nav.navbar.inverse button > i.fa.fa-bars {
+  color: var(--color-dark-gray) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: unset !important;
+}
+
+ul.menu-loop {
+  width: 100%;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  ul.menu-loop {
+    background: var(--color-light-gray-2) !important;
+    padding-left: 10px;
+    border-radius: 15px;
+    padding-right: 10px;
+  }
+
+  ul.menu-loop > li {
+    border-bottom: 1px solid var(--color-light-gray);
+  }
+
+  ul.menu-loop > li > a {
+    color: var(--color-dark-gray);
+  }
+}
+
+img.logo-user {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0px 10px;
+}
+
+li.nav-item.user-option {
+  line-height: 34px;
+}
+
+button.navbar-toggler {
+  outline: none;
+}

@@ -1,0 +1,169 @@
+<div class="container-fluid" *ngIf="shipmentDetail">
+  <div class="row expansion-main-content" [ngClass]="{'transparent': transparent}">
+    <div class="col-md-6 col-12 hidden-responsive">
+      <div class="w-100 p-30 info-container">
+        <h1 class="mb-2 title">{{ 'shipments.ref' | translate | uppercase }}</h1>
+        <p class="mb-2 shipment-ref">#{{ shipmentDetail.shipmentRef }}</p>
+        <p class="fs-14 mb-2">
+          {{ shipmentDetail.origin }}
+          <i class="fa fa-arrow-right"></i>
+          {{ shipmentDetail.destiny }}
+        </p>
+        <p class="fs-14">
+          {{ 'shipments.seal_number' | translate }} / <b>#{{ shipmentDetail.shipmentRef }}</b>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6 col-12">
+      <div class="w-100 p-30 isotank-container">
+        <div class="float-md-end text-md-end">
+          <img src="/assets/img/logo-blue.png" class="mb-4 hidden-responsive" />
+          <div class="label-isotank">
+            <p class="mb-1">
+              <img src="/assets/img/shipment.png" class="me-2" />
+              <b class="bold fs-14">
+                {{ 'shipments.isotank' | translate | uppercase }}
+              </b>
+            </p>
+            <p class="mb-0 fs-14">
+              <b class="bold">
+                {{ 'shipments.status_a' | translate }} :
+              </b>
+              <span class="status">
+                {{ shipmentDetail.isotankStatus }}
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--STATUS-->
+    <div class="col-12">
+      <div class="p-30 pt-1">
+        <ul class="progressbar">
+          <li *ngFor="let s of shipmentStatus" [ngClass]="{'active': s.date !== null}">
+            <ng-container [ngSwitch]="s.status">
+              <span *ngSwitchCase="0" class="status-label">
+                {{ 'shipments.pick_up' | translate | uppercase }}
+              </span>
+              <span *ngSwitchCase="1" class="status-label">
+                {{ 'shipments.set_sail' | translate | uppercase }}
+              </span>
+              <span *ngSwitchCase="2" class="status-label">
+                {{ 'shipments.arrived' | translate | uppercase }}
+              </span>
+              <span *ngSwitchCase="3" class="status-label">
+                {{ 'shipments.delivered' | translate | uppercase }}
+              </span>
+            </ng-container>
+            <span class="fs-14">
+              {{ s.date === null ?  ('shipments.pending' | translate) : s.date | date:'dd/MM/yyyy' }}
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-12 show-responsive">
+      <div class="p-30">
+        <h6>
+          <b>
+            {{ 'shipments.shipment_information' | translate | uppercase }}
+          </b>
+        </h6>
+        <hr>
+        <p class="fs-14 mb-2">
+          {{ shipmentDetail.origin }}
+          <i class="fa fa-arrow-right"></i>
+          {{ shipmentDetail.destiny }}
+        </p>
+        <p class="fs-14 mb-0">
+          {{ 'shipments.seal_number' | translate }} / <b>#{{ shipmentDetail.shipmentRef }}</b>
+        </p>
+      </div>
+    </div>
+
+    <!--DATES-->
+    <div class="col-12">
+      <div class="p-30 pt-1">
+        <hr class="mt-0">
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <b class="fs-14">{{ 'shipments.estimated_arrival' | translate }} /</b>
+            &nbsp;
+            <span class="fs-14">{{ shipmentDetail.estimatedTimeArrival | date:'dd/MM/yy' }}</span>
+          </div>
+          <div class="col-md-4 col-12">
+            <b class="fs-14">{{ 'shipments.cut_off_date' | translate }} /</b>
+            &nbsp;
+            <span class="fs-14">{{ shipmentDetail.cutOffDate | date:'dd/MM/yy' }}</span>
+          </div>
+          <div class="col-md-4 col-12">
+            <b class="fs-14">{{ 'shipments.gross_weight' | translate }} /</b>
+            &nbsp;
+            <span class="fs-14">{{ shipmentDetail.grossWeight }}</span>
+          </div>
+          <div class="col-md-4 col-12">
+            <b class="fs-14">{{ 'shipments.time_departure' | translate }} /</b>
+            &nbsp;
+            <span class="fs-14">{{ shipmentDetail.estimatedTimeDeparture | date:'dd/MM/yy' }}</span>
+          </div>
+          <div class="col-md-4 col-12">
+            <b class="fs-14">{{ 'shipments.net_weigth' | translate }} /</b>
+            &nbsp;
+            <span class="fs-14">{{ shipmentDetail.weight }}</span>
+          </div>
+          <div class="col-md-4 col-12">
+            <b class="fs-14">{{ 'shipments.quantity' | translate }} /</b>
+            &nbsp;
+            <span class="fs-14">{{ shipmentDetail.quantity }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 documents">
+      <div class="p-30">
+        <div class="row">
+          <div class="col-md-3 col-12">
+            <p class="mb-2 fs-14 subtitle">
+              <img src="/assets/img/client-documents.png" />
+              {{ 'shipments.client_documents' | translate }}
+            </p>
+            <p class="mb-1 fs-14" *ngFor="let cd of shipmentDetail.clientDocuments">
+              <b>{{ cd.name }} /&nbsp;</b>
+              {{ cd.date | date:'dd/MM/yy' }}
+            </p>
+          </div>
+          <div class="col-md-3 col-12">
+            <p class="mb-2 fs-14 subtitle">
+              <img src="/assets/img/loop-documents.png" />
+              {{ 'shipments.loop_documents' | translate }}
+            </p>
+            <p class="mb-1 fs-14" *ngFor="let cd of shipmentDetail.LoopDocuments">
+              <b>{{ cd.name }} /&nbsp;</b>
+              {{ cd.date | date:'dd/MM/yy' }}
+            </p>
+          </div>
+          <div class="col-md-3 col-12">
+            <p class="mb-2 fs-14 subtitle">
+              <img src="/assets/img/loop-documents.png" />
+              {{ 'shipments.quote_invoice_documents' | translate }}
+            </p>
+            <p class="mb-1 fs-14" *ngFor="let cd of shipmentDetail.quoteInvoice">
+              <b>{{ cd.name }} /&nbsp;</b>
+              {{ cd.date | date:'dd/MM/yy' }}
+            </p>
+          </div>
+          <div class="col-md-3 col-12">
+            <button type="button" class="btn btn-primary btn-add-documents float-md-end mt-2">
+              {{ 'shipments.add_document' | translate | uppercase }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

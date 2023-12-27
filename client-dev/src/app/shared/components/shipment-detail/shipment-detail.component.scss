@@ -1,0 +1,145 @@
+.show-responsive {
+  display: none;
+}
+
+@media (max-width: 767px) {
+
+  .progressbar li:after {
+    left: -32% !important;
+  }
+
+  .hidden-responsive {
+    display: none;
+  }
+
+  .show-responsive {
+    display: block;
+  }
+
+  .btn-add-documents {
+    width: 100%;
+    margin-top: 20px !important;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    margin-top: 15px;
+  }
+
+  .isotank-container {
+    text-align: center;
+    padding: 15px 20px !important;
+  }
+
+  .info-container {
+    padding-bottom: 10px !important;
+  }
+}
+
+.label-isotank {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 45px;
+
+  .bold {
+    color: var(--color-blue-progress);
+    font-weight: bold;
+  }
+
+  .status {
+    color: var(--color-blue);
+  }
+}
+
+.expansion-main-content.transparent {
+  background-color: transparent !important;
+}
+
+.expansion-main-content {
+  background-color: var(--color-light-gray-5);
+  h1.title {
+    font-size: 30px;
+    color: var(--color-blue-progress);
+    font-weight: bold;
+  }
+
+  p.shipment-ref {
+    font-size: 20px;
+    color: var(--color-dark-gray);
+    font-weight: bold;
+  }
+
+  i.fa.fa-arrow-right {
+    color: var(--color-success);
+  }
+
+  .subtitle {
+    color: var(--color-blue);
+    font-weight: bold;
+  }
+
+  .documents {
+    background-color: var(--color-light-gray-6);
+  }
+}
+
+/*STATUS BAR*/
+.progressbar {
+  margin-bottom: 6%;
+  list-style: none;
+}
+
+.progressbar li {
+  float: left;
+  width: 25%;
+  position: relative;
+  text-align: center;
+  z-index: 9;
+}
+
+.progressbar li:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 2px solid #bebebe;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  line-height: 27px;
+  background: white;
+  color: #bebebe;
+  text-align: center;
+  font-weight: bold;
+}
+
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 3px;
+  background: rgba($color: #979797, $alpha: 0.5);
+  top: 15px;
+  left: -44%;
+  z-index: -1;
+  margin-right: 5px;
+}
+
+.progressbar li:first-child:after {
+  content: none;
+}
+
+.progressbar li.active:after {
+  background: var(--color-success);
+}
+.progressbar li.active:before {
+  border-color: var(--color-success);
+  background: var(--color-success);
+  color: white;
+  content: "\2713";
+}
+
+.status-label {
+  color: var(--color-blue-progress);
+  font-weight: bold;
+  display: block;
+}

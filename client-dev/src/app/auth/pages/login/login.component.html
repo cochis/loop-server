@@ -1,0 +1,86 @@
+<div class="container auth">
+  <div class="row">
+    <div class="col-md-6 auth-background d-none d-md-block">
+      <div>
+        <p>
+          <a nghref="#" [routerLink]="['/home']" class="back white">
+            <i class="fa fa-chevron-left"></i>
+            {{ "auth.back_button" | translate | uppercase }}
+          </a>
+        </p>
+
+        <img src="/assets/img/logo-big.png" />
+
+        <div class="legend">
+          <h1>
+            {{ "auth.login.legend_title" | translate | uppercase }}
+          </h1>
+          <p>
+            {{ "auth.login.legend_desc" | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-12 grid-auth">
+      <div class="auth-form">
+        <p class="d-sm-block d-md-none">
+          <a nghref="#" [routerLink]="['/home']" class="back">
+            <i class="fa fa-chevron-left"></i>
+            {{ "auth.back_button" | translate | uppercase }}
+          </a>
+        </p>
+
+        <h1>
+          <img src="/assets/img/logo-pink.png" class="mt-2 mb-3 d-sm-block d-md-none" />
+          {{ "auth.login.title" | translate | uppercase }}
+        </h1>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <input type="text" placeholder="{{ 'auth.login.username' | translate }} *" class="form-control"
+            formControlName="username" />
+          <div class="divError">
+            <span class="font-responsive text-danger" *ngIf="validator.validFormField(form, 'username')">{{
+              'validations.required' | translate }}</span>
+          </div>
+
+          <input type="password" placeholder="{{ 'auth.login.password' | translate }} *" class="form-control"
+            formControlName="password" />
+          <div class="divError">
+            <span class="font-responsive text-danger" *ngIf="validator.validFormField(form, 'password')">{{
+              'validations.required' | translate }}</span>
+          </div>
+
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary submit">
+              {{ "auth.login.title" | translate | uppercase }}
+            </button>
+          </div>
+
+
+          <div *ngIf="message" class="alert alert-danger">
+            <i class="fa fa-info-circle"></i> {{ message }}
+          </div>
+
+          <p class="font-responsive">
+            {{ "auth.login.no_account" | translate }}
+            <a nghref="#" class="pink" [routerLink]="['/auth/register']">
+              {{ "auth.register.title" | translate }}
+            </a>
+          </p>
+
+          <hr />
+
+          <p class="font-responsive">
+            <input type="checkbox" formControlName="keepLogged" />
+            {{ "auth.login.keep_login" | translate }}
+          </p>
+        </form>
+        <p class="font-responsive">
+          <a nghref="#" class="pink" [routerLink]="['/auth/forgot-password']">
+            {{ "auth.login.forgot_password" | translate }}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

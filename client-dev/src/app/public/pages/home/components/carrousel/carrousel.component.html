@@ -1,0 +1,17 @@
+<div class="carousel-slider carousel-fade">
+  <div
+    id="carouselExampleCaptions"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div *ngFor="let c of carousel" [class]="c.className">
+        <div
+          class="carousel-caption d-md-block"
+        >
+          <h5 class="title-carousel" [innerHTML]="'carousel.' + c.name | translate"></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

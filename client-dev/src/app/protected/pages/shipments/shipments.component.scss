@@ -1,0 +1,18 @@
+div.dashboard-container {
+  div.shipments-table {
+    background-color: var(--color-white);
+
+    .row-shipment {
+      border-bottom: 1px solid var(--color-light-gray-3) !important;
+    }
+  }
+
+  div.main-container {
+    img {
+      position: absolute;
+      top: 30px;
+      right: 0px;
+    }
+  }
+}
+

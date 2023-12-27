@@ -1,0 +1,49 @@
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-caption {
+  text-align: left;
+  position: initial;
+  margin-top: 5%;
+}
+
+.title-carousel {
+  font-size: 80px;
+}
+
+.carousel-slider {
+  height: 430px;
+  margin-top: 7%;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  .title-carousel {
+    font-size: 45px !important;
+  }
+
+  .carousel-slider {
+    height: 305px !important;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1550px) {
+  .title-carousel {
+    font-size: 55px !important;
+  }
+
+  .carousel-slider {
+    height: 295px !important;
+  }
+}
+
+::ng-deep h5.title-carousel > b {
+  font-weight: bolder;
+}
+
+::ng-deep h5.title-carousel > span {
+  font-weight: 100;
+}
+
+
+

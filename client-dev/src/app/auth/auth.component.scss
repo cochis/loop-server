@@ -1,0 +1,98 @@
+div.auth {
+  background-color: var(--color-white);
+}
+
+div.auth > div > div {
+  height: 100vh;
+}
+
+div.auth div.auth-background {
+  background-image: url("/assets/img/auth-background.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+div.auth div.auth-background > div {
+  padding: 3% 13%;
+  height: 100%;
+}
+
+div.auth div.auth-background > div > img {
+  margin-top: 15%;
+}
+
+div.auth div.auth-background > div > div.legend {
+  bottom: 100px;
+  position: absolute;
+  padding-right: 13%;
+}
+
+div.auth div.auth-background > div > div.legend > p {
+  font-size: 16px;
+}
+
+div.auth div.auth-background h1,
+div.auth div.auth-background p,
+div.auth div.auth-background ul,
+div.auth
+  div.auth-background
+  > div
+  > p
+  > a.back
+  div.auth
+  div.auth-background
+  span {
+  color: var(--color-white) !important;
+  text-decoration: none;
+}
+
+div.auth div.grid-auth {
+  position: relative;
+}
+
+div.auth div.auth-form p > a.back {
+  color: var(--color-dark-gray) !important;
+  text-decoration: none;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+div.auth div.auth-form {
+  padding: 15%;
+  background-color: var(--color-white);
+}
+
+div.auth div.auth-form > h1 {
+  text-align: center;
+  color: var(--color-dark-gray) !important;
+}
+
+div.auth div.auth-form > h1 > img {
+  width: 50px;
+}
+
+div.auth div.auth-form  input[type="text"],
+div.auth div.auth-form  input[type="password"] {
+  margin-bottom: 0px;
+}
+
+div.auth div.auth-form div.divError {
+  margin-bottom: 15px;
+}
+
+div.auth div.auth-form  div > button.submit {
+  margin-bottom: 20px;
+}
+
+div.auth div.auth-form > p {
+  text-align: center;
+}
+
+div.auth div.grid-auth {
+  display: grid;
+  align-items: center;
+  max-height: 100vh;
+  overflow-y: auto;
+}

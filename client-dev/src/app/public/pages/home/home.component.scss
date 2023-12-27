@@ -1,0 +1,35 @@
+div.home-image {
+  position: absolute;
+  height: 120vh;
+  width: 100%;
+  background-image: linear-gradient(
+      180deg,
+      var(--color-black) -15.22%,
+      var(--color-middle-black) 60%
+    ),
+    linear-gradient(365deg, var(--color-white) 3%, var(--color-middle-black) 70%),
+    url("/assets/img/home-background.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0px;
+  // background-position: 65% 60%;
+  background-position: 65% 80%;
+}
+
+div.img-about-us {
+  background-image: url("/assets/img/about-us-background.png");
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: contain;
+  background-color: #FEFEFF;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  div.img-about-us {
+    background-image: unset !important;
+  }
+
+  div.home-image {
+    background-position: 65% 0%;
+  }
+}

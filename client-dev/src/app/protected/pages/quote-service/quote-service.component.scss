@@ -1,0 +1,48 @@
+div.dashboard-container {
+  div.quotations-service {
+    background-color: var(--color-white);
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    textarea {
+      height: 150px;
+    }
+
+    button {
+      width: 200px;
+    }
+
+    .card-info {
+      background-color: #F4F5F6;
+      border-radius: 4px;
+      padding: 30px;
+
+      h4 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #E81F76;
+      }
+
+      p {
+        color: #757783;
+        margin-bottom: 5px;
+        span {
+          font-weight: bold;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .main-container {
+    img {
+      position: absolute;
+      top: 30px;
+      right: 0px;
+    }
+
+    p {
+      max-width: 50%;
+    }
+  }
+}

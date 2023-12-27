@@ -1,0 +1,88 @@
+<div class="quote-preview">
+  <div class="row">
+    <div class="col-12">
+      <object data="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf" type="application/pdf"></object>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center div-buttons">
+          <button type="button" class="btn btn-primary me-3" (click)="confirm()">
+            {{ "quote_preview.confirm_button" | translate | uppercase }}
+          </button>
+          <button type="button" class="btn btn-outline-info" (click)="openDecline()">
+            {{ "quote_preview.decline_button" | translate | uppercase }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-toast (onClose)="closeToast()" [breakpoints]="{ '920px': { width: '100%', right: '0', left: '0' } }"></p-toast>
+
+<p-confirmDialog #cd icon="pi pi-exclamation-triangle">
+  <ng-template pTemplate="header">
+    <h3>{{ "quote_preview.confirmation_title" | translate }}</h3>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button type="button" class="btn btn-primary" (click)="cd.accept()">
+      {{ "quote_preview.yes_button" | translate | uppercase }}
+    </button>
+    <button type="button" class="btn btn-outline-info" (click)="cd.reject()">
+      {{ "quote_preview.no_button" | translate | uppercase }}
+    </button>
+  </ng-template>
+</p-confirmDialog>
+
+<p-dialog class="confirmation-dialog" [(visible)]="displayConfirmation" [modal]="true"
+  [breakpoints]="{ '960px': '90vw' }" [style]="{ width: '30vw' }" [draggable]="false" [resizable]="false"
+  [closeOnEscape]="false">
+  <img src="/assets/img/success.png" class="mb-3" />
+  <h3>{{ titleMesasge }}</h3>
+  <p [innerHTML]="message"></p>
+  <hr />
+  <button type="button" class="btn btn-primary w-100" (click)="closeToast()">
+    {{ "quote_preview.confirmation_button" | translate | uppercase }}
+  </button>
+  <hr class="mb-0" />
+</p-dialog>
+
+<p-dialog header="{{ 'quote_preview.modal_reject_title' | translate | uppercase }}" [(visible)]="displayReject"
+  [modal]="true" [breakpoints]="{ '960px': '90vw' }" [style]="{ width: '30vw' }" [draggable]="false"
+  [resizable]="false">
+  <p>{{ "quote_preview.modal_reject_subtitle" | translate }}</p>
+  <hr />
+  <div class="field-radiobutton mb-3">
+    <p-radioButton value="Chicago" [(ngModel)]="declineReason"></p-radioButton>
+    <label>&nbsp;Lorem ipsum dolor sit amet</label>
+  </div>
+  <div class="field-radiobutton mb-3">
+    <p-radioButton value="Los Angeles" [(ngModel)]="declineReason"></p-radioButton>
+    <label>&nbsp;Lorem ipsum dolor sit amet</label>
+  </div>
+  <div class="field-radiobutton mb-3">
+    <p-radioButton value="New York" [(ngModel)]="declineReason"></p-radioButton>
+    <label>&nbsp;Lorem ipsum dolor sit amet</label>
+  </div>
+  <div class="field-radiobutton mb-3">
+    <p-radioButton value="Other" [(ngModel)]="declineReason"></p-radioButton>
+    <label>&nbsp;{{ "quote_preview.other_radio" | translate }}</label>
+  </div>
+  <textarea *ngIf="declineReason === 'Other'" placeholder="{{ 'quote_preview.text_area_placeholder' | translate }}"
+    class="form-control" style="height: 100px"></textarea>
+  <hr />
+  <div class="row">
+    <div class="col-6">
+      <button type="button" class="btn btn-primary w-100" (click)="decline()" [disabled]="!declineReason">
+        {{ "quote_preview.send_button" | translate | uppercase }}
+      </button>
+    </div>
+    <div class="col-6">
+      <button type="button" class="btn btn-primary w-100" (click)="repost()" [disabled]="!declineReason">
+        {{ "quote_preview.repost_button" | translate | uppercase }}
+      </button>
+    </div>
+  </div>
+</p-dialog>

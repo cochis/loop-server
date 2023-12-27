@@ -1,0 +1,21 @@
+.dashboard-container {
+  .profile-content {
+    background-color: var(--color-white);
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .alert.alert-warning {
+      border: 2px solid #927200;
+    }
+  }
+
+  .main-container {
+    .relative {
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+<nav *ngIf="!isHidden" [class]="
+    (isTransparent ? 'navbar' : 'navbar inverse') +
+    ' ' +
+    (isDashboard ? 'dashboard' : '') +
+    ' navbar-expand-lg fixed-top'
+  ">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/" (click)="navigateToSection('main-container', -120)">
+      <img *ngIf="logo" [src]="'/assets/img/' + logo + '.png'" alt="LOGO LOOP" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+
+    <div *ngIf="innerWidth < 992; else normalNavBar" class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav menu-loop">
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <a class="nav-link" aria-current="page" nghref="#" routerLink="/"
+            (click)="navigateToSection('about_us_section')">{{ "nav_bar.about_us" | translate | uppercase }}</a>
+        </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <a class="nav-link" nghref="#" routerLink="/" (click)="navigateToSection('services_section')">{{
+            "nav_bar.services" | translate | uppercase }}</a>
+        </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <a class="nav-link" nghref="#" routerLink="/dashboard/quote-service">{{
+            "nav_bar.quote" | translate | uppercase
+            }}</a>
+        </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <a class="nav-link" href="https://www.magaya.com/" target="_blank">{{
+            "nav_bar.tracking" | translate | uppercase }}</a>
+        </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <a class="nav-link" nghref="#" routerLink="/home/contact">{{
+            "nav_bar.contact" | translate | uppercase
+            }}</a>
+        </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" *ngIf="loggedUser">
+          <a class="nav-link" nghref="#" [routerLink]="['/dashboard']">{{
+            "nav_bar.my_dashboard" | translate | uppercase
+            }}</a>
+        </li>
+        <li class="nav-item hidden-sm">
+          <a class="nav-link divider" nghref="#">|</a>
+        </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" *ngIf="!loggedUser">
+          <a class="nav-link" href="https://www.magaya.com/" target="_blank">{{
+            "nav_bar.sign_in" | translate | uppercase
+            }}</a>
+        </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" *ngIf="loggedUser">
+          <a class="nav-link" nghref="#" [routerLink]="['/dashboard/profile']">
+            {{ "nav_bar.my_profile" | translate | uppercase }}
+          </a>
+          <a class="nav-link" nghref="#" (click)="logout()">{{
+            "nav_bar.sign_out" | translate | uppercase
+            }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <ng-template #normalNavBar>
+      <div class="d-flex hidden-sm">
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav menu-loop">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" nghref="#" routerLink="/"
+                (click)="navigateToSection('about_us_section')">{{ "nav_bar.about_us" | translate | uppercase }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" nghref="#" routerLink="/" (click)="navigateToSection('services_section')">{{
+                "nav_bar.services" | translate | uppercase }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" nghref="#" routerLink="/dashboard/quote-service">{{
+                "nav_bar.quote" | translate | uppercase
+                }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.magaya.com/" target="_blank">{{
+                "nav_bar.tracking" | translate | uppercase }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" nghref="#" routerLink="/home/contact">{{
+                "nav_bar.contact" | translate | uppercase
+                }}</a>
+            </li>
+            <li class="nav-item" *ngIf="loggedUser">
+              <a class="nav-link" nghref="#" [routerLink]="['/dashboard']">{{
+                "nav_bar.my_dashboard" | translate | uppercase
+                }}</a>
+            </li>
+            <li class="nav-item hidden-sm">
+              <a class="nav-link divider" nghref="#">|</a>
+            </li>
+            <li class="nav-item" *ngIf="!loggedUser">
+              <a class="nav-link" href="https://www.magaya.com/" target="_blank">{{
+                "nav_bar.sign_in" | translate | uppercase
+                }}</a>
+            </li>
+            <li class="nav-item user-option" *ngIf="loggedUser">
+              <div class="dropdown">
+                <a nghref="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img [src]="
+                      loggedUser.photo
+                        ? loggedUser.photo
+                        : '/assets/img/default-user.png'
+                    " class="logo-user" />
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item fs-12 pointer" nghref="#" [routerLink]="['/dashboard/profile']">
+                      <i class="blue fa fa-user fs-14"></i>
+                      &nbsp;
+                      {{ "nav_bar.my_profile" | translate | uppercase }}</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item fs-12 pointer" nghref="#" (click)="logout()">
+                      <i class="pink fa fa-sign-out fs-14"></i>
+                      &nbsp;
+                      {{ "nav_bar.sign_out" | translate | uppercase }}</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</nav>

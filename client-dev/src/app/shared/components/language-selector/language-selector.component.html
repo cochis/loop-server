@@ -1,0 +1,31 @@
+<div class="dropdown lang-selector" *ngIf="selectedCountry">
+  <a
+    nghref="#"
+    role="button"
+    id="dropdownMenuLink"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    class="black"
+  >
+    <img
+      [src]="'/assets/img/' + selectedCountry.code.toUpperCase() + '.png'"
+      class="flag"
+    />
+    <span class="name-language">{{
+      selectedCountry.name.toUpperCase()
+    }}</span>
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li *ngFor="let c of countries">
+      <a
+        class="dropdown-item fs-12 pointer"
+        nghref="#"
+        (click)="changeLang(c.code)"
+      >
+        <img [src]="'/assets/img/' + c.code + '.png'" class="flag" />
+        {{ c.name }}
+      </a>
+    </li>
+  </ul>
+</div>

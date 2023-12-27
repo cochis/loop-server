@@ -1,0 +1,71 @@
+<div
+  class="offered-services"
+  v-if="serviceId > 0"
+  [style]="{
+    'background-image': 'url(/assets/img/service' + serviceId + '.png)'
+  }"
+>
+  <!--MAIN CONTAINER-->
+  <div class="main-container container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="container-service">
+          <br />
+          <span class="back-link"
+            (click)="goToServices()"
+            ><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;
+              {{ 'services.back_button' | translate | uppercase }}
+            </span
+          >
+
+          <h1>
+            {{ "services.title" | translate | uppercase }}
+          </h1>
+          <h3>
+            <img [src]="'/assets/img/icon_service' + serviceId + '.png'" />
+            {{ "services.service" + serviceId | translate | uppercase }}
+          </h3>
+          <p class="text-justify">
+            {{ "services.service" + serviceId + "_desc" | translate }}
+          </p>
+
+          <p class="text-justify">
+            <b>{{ "services.include_service" | translate | uppercase }}</b>
+          </p>
+
+          <div
+            innerHTML="{{
+              'services.service' + serviceId + '_include' | translate
+            }}"
+          ></div>
+
+          <p class="text-justify">
+            {{ "services.text_summary_service" | translate }}
+          </p>
+
+          <button type="button" class="btn btn-lg btn-primary">
+            {{ "services.quote_now_button" | translate | uppercase }}
+          </button>
+
+          <div class="navigation-responsive">
+            <button type="button" class="btn btn-sm btn-secondary" (click)="prevService()">
+              <i class="fa fa-angle-left"></i>
+            </button>
+            &nbsp;
+            <button type="button" class="btn btn-sm btn-secondary" (click)="nextService()">
+              <i class="fa fa-angle-right"></i>
+            </button>
+          </div>
+
+          <a nghref="#" class="navigation-services left" (click)="prevService()">
+            <i class="fa fa-angle-left"></i>
+          </a>
+          <a nghref="#" class="navigation-services right" (click)="nextService()">
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
