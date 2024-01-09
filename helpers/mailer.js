@@ -5,17 +5,16 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        // TODO: replace `user` and `pass` values from <https://forwardemail.net>
         user: 'oramirez@jasu.us',
         pass: 'apmscnefgdkphrzm'
-        // user: 'info@cochisweb.com',
-        // pass: 'uxrodsiiwzgsxryv'
-        /* pass: 'uxrodsiiwzgsxryv' */
     }
 });
 
 transporter.verify().then(() => {
     console.log('Ready for send emails');
+}).catch((err)=>{
+    console.log('err', err)
+
 })
 
 

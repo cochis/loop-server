@@ -7,7 +7,6 @@ const https = require('https')
 const fs = require('fs')
 // Crear el servidor de express
 const app = express()
-
 // Configurar CORS
 app.use(cors())
 //Carpeta publoc
@@ -22,6 +21,7 @@ app.use(express.json())
 dbConnection()
 
 // Rutas
+app.use('/api/mailer', require('./routes/mailer'))
  
 
 

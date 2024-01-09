@@ -43,7 +43,7 @@
             {{ "services.text_summary_service" | translate }}
           </p>
 
-          <button type="button" class="btn btn-lg btn-primary">
+          <button type="button" class="btn btn-lg btn-primary" routerLink="/dashboard/quote-service"> 
             {{ "services.quote_now_button" | translate | uppercase }}
           </button>
 
@@ -51,12 +51,12 @@
             <button type="button" class="btn btn-sm btn-secondary" (click)="prevService()">
               <i class="fa fa-angle-left"></i>
             </button>
-            &nbsp;
+            &nbsp; 
             <button type="button" class="btn btn-sm btn-secondary" (click)="nextService()">
               <i class="fa fa-angle-right"></i>
             </button>
           </div>
-
+      
           <a nghref="#" class="navigation-services left" (click)="prevService()">
             <i class="fa fa-angle-left"></i>
           </a>
