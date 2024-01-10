@@ -226,7 +226,12 @@
     "special_request": "Do you have any special request?",
     "submit": "SUBMIT",
     "phone": "TELEPHONE",
-    "us": "US."
+    "us": "US.",
+    "message_button": "Close",
+    "success_title": "Your message has been sent!",
+    "success_message": "Thank you! We will get to you as soon as possible.",
+    "failed_title": "Failed to send your message.",
+    "failed_message": "Please try again."
   },
   "shipments": {
     "ref": "SHIPMENT REF",

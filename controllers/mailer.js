@@ -1,17 +1,19 @@
 const { response } = require('express')
 const { transporter } = require('../helpers/mailer')
 
- 
+// const mail='oramirez@jasu.us , ing.oarrs@gmail.com'
+const mail='info@loopintermodal.com, pricing@loopintermodal.com'
+
 const sendContact = async (req, res = response) => {
-  const campos = {
-    ...req.body 
-  }
-  try {
-    await transporter.sendMail({
-      from: `"Formulario de contacto" <${campos.email}>`, // sender address
-      to: 'oramirez@jasu.us', // list of receivers
-      subject: "Formulario de contacto", // Subject line
-      html: `
+    const campos = {
+        ...req.body
+    }
+    try {
+        await transporter.sendMail({
+            from: `"Formulario de contacto" <info@loopintermodal.com>`, // sender address
+            to: mail, // list of receivers
+            subject: "Formulario de contacto", // Subject line
+            html: `
           <!DOCTYPE html>
 <html lang="en">
 
@@ -72,26 +74,26 @@ const sendContact = async (req, res = response) => {
 
 </html>
           `,
-    });
-    return res.status(200).json({
-      code: 200,
-      message: 'Mensaje envidado',
-    })
-  } catch (error) {
-    console.log('error::: ', error);
-    return res.status(400).json({ ok: false, message: 'Algo sacudió mal', error })
-  }
-} 
+        });
+        return res.status(200).json({
+            code: 200,
+            message: 'Mensaje envidado',
+        })
+    } catch (error) {
+        console.log('error::: ', error);
+        return res.status(400).json({ ok: false, message: 'Algo sacudió mal', error })
+    }
+}
 const sendQuote = async (req, res = response) => {
-  const campos = {
-    ...req.body 
-  }
-  try {
-    await transporter.sendMail({
-      from: `"Formulario de contacto" <${campos.email}>`, // sender address
-      to: 'oramirez@jasu.us', // list of receivers
-      subject: "Formulario de contacto", // Subject line
-      html: `
+    const campos = {
+        ...req.body
+    }
+    try {
+        await transporter.sendMail({
+            from: `"Quote" <info@loopintermodal.com>`, // sender address
+            to: mail, // list of receivers
+            subject: "Quote", // Subject line
+            html: `
           <!DOCTYPE html>
 <html lang="en">
 
@@ -107,44 +109,59 @@ const sendQuote = async (req, res = response) => {
     <table class="table">
         <thead>
             <tr>
-                <h2>Formulario de contacto</h2>
+                <h2>Quote</h2>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">Name</th>
-                <td>${campos.name}</td>
+        <tr>
+        <th scope="row">Name</th>
+        <td>${campos.first_name}</td>
 
-            </tr>
-            <tr>
-                <th scope="row">Surname</th>
-                <td>${campos.surname}</td>
+    </tr>
+    <tr>
+        <th scope="row">Business</th>
+        <td>${campos.business}</td>
 
-            </tr>
-            <tr>
-                <th scope="row">Email</th>
-                <td>${campos.email}</td>
+    </tr>
+    <tr>
+        <th scope="row">Email</th>
+        <td>${campos.email}</td>
 
-            </tr>
-            <tr>
-                <th scope="row">Phone</th>
-                <td>${campos.phone}</td>
+    </tr>
+    <tr>
+        <th scope="row">Origin</th>
+        <td>${campos.origin}</td>
 
-            </tr>
-            <tr>
-                <th scope="row">Bussines</th>
-                <td>${campos.business}</td>
+    </tr>
+    <tr>
+        <th scope="row">Destiny</th>
+        <td>${campos.destiny}</td>
 
-            </tr>
-            <tr>
-                <th scope="row">Contact Reason</th>
-                <td>${campos.contactReason}</td>
+    </tr>
+    <tr>
+        <th scope="row">Type Merchandise</th>
+        <td>${campos.type_merchandise}</td>
 
-            </tr>
-            <tr>
-                <th scope="row">Notes</th>
-                <td>${campos.notes}</td>
+    </tr>
+    <tr>
+        <th scope="row">Quantity</th>
+        <td>${campos.quantity}</td>
 
-            </tr>
+    </tr>
+    <tr>
+        <th scope="row">Type Service</th>
+        <td>${campos.type_service}</td>
+
+    </tr>
+    <tr>
+        <th scope="row">Incoterm</th>
+        <td>${campos.incoterm}</td>
+
+    </tr>
+    <tr>
+        <th scope="row">Special Request</th>
+        <td>${campos.special_request}</td>
+
+    </tr>
 
         </tbody>
     </table>
@@ -152,22 +169,23 @@ const sendQuote = async (req, res = response) => {
 
 </html>
           `,
-    });
-    return res.status(200).json({
-      code: 200,
-      message: 'Mensaje envidado',
-    })
-  } catch (error) {
-    console.log('error::: ', error);
-    return res.status(400).json({ ok: false, message: 'Algo sacudió mal', error })
-  }
-} 
+        });
+        return res.status(200).json({
+            code: 200,
+            message: 'Mensaje envidado',
+        })
+    } catch (error) {
+        console.log('error::: ', error);
+        return res.status(400).json({ ok: false, message: 'Algo sacudió mal', error })
+    }
+}
 
 
 
 
 
 module.exports = {
-  
-  sendContact
+
+    sendContact,
+    sendQuote
 }

@@ -5,8 +5,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'oramirez@jasu.us',
-        pass: 'apmscnefgdkphrzm'
+        user: 'info@loopintermodal.com',
+        pass: 'atojqblfcjpzayyw'
     }
 });
 

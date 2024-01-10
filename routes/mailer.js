@@ -6,7 +6,7 @@ const { Router } = require("express");
  
 const {
    
-  sendContact
+  sendContact,sendQuote
 } = require("../controllers/mailer");
  
 const router = Router();
@@ -14,6 +14,7 @@ const router = Router();
 
  
 router.post("/sendContacto", sendContact); 
+router.post("/sendQuote", sendQuote); 
 
 
 module.exports = router;
