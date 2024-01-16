@@ -1,14 +1,20 @@
 const { response } = require('express')
 const { transporter } = require('../helpers/mailer')
-
-// const mail='oramirez@jasu.us , ing.oarrs@gmail.com'
-const mail='info@loopintermodal.com, pricing@loopintermodal.com'
+const Contacto = require ('../models/contacto')
+const Quote = require ('../models/quote')
+const mail = 'oramirez@jasu.us , ing.oarrs@gmail.com'
+// const mail='info@loopintermodal.com, pricing@loopintermodal.com'
 
 const sendContact = async (req, res = response) => {
     const campos = {
         ...req.body
     }
-    try {
+
+    const contacto = new Contacto({
+        ...campos
+      })
+    try {   
+        await contacto.save()
         await transporter.sendMail({
             from: `"Formulario de contacto" <info@loopintermodal.com>`, // sender address
             to: mail, // list of receivers
@@ -77,7 +83,7 @@ const sendContact = async (req, res = response) => {
         });
         return res.status(200).json({
             code: 200,
-            message: 'Mensaje envidado',
+            message: 'Mensaje envidado ',
         })
     } catch (error) {
         console.log('error::: ', error);
@@ -88,7 +94,11 @@ const sendQuote = async (req, res = response) => {
     const campos = {
         ...req.body
     }
+    const quote = new Quote({
+        ...campos
+      })
     try {
+        await quote.save()
         await transporter.sendMail({
             from: `"Quote" <info@loopintermodal.com>`, // sender address
             to: mail, // list of receivers

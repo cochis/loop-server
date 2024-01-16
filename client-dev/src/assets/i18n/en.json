@@ -1,5 +1,5 @@
 {
-  "nav_bar" : {
+  "nav_bar": {
     "about_us": "About Us",
     "services": "Services",
     "contact": "Contact",
@@ -64,7 +64,7 @@
     "value4": "Inventory Financing",
     "value_desc4": "We grant you up to 120 days credit from Bill of Lading so you can import more and optimize the working capital of your company."
   },
-  "auth" :{
+  "auth": {
     "back_button": "Back",
     "login": {
       "legend_title": "WELCOME",
@@ -218,7 +218,7 @@
     "business": "Business",
     "email": "E-mail",
     "origin": "Origin",
-    "destiny": "Destiniy",
+    "destiny": "Destination",
     "type_merchandise": "Type of Merchandise",
     "quantity": "Quantity and Type of Container",
     "type_service": "Type of service",
@@ -226,7 +226,54 @@
     "special_request": "Do you have any special request?",
     "submit": "SUBMIT",
     "phone": "TELEPHONE",
-    "us": "US."
+    "us": "US.",
+    "service":"Service",
+    "incoterms": [
+      {
+        "name": "Ex Works",
+        "value": "EXW"
+      },
+      {
+        "name": "Free Carrier",
+        "value": "FCA"
+      },
+      {
+        "name": "Free Alongside Ship",
+        "value": "FAS"
+      },
+      {
+        "name": "Free On Board",
+        "value": "FOB"
+      },
+      {
+        "name": "Cost And Freight",
+        "value": "CFR"
+      },
+      {
+        "name": "Cost, Insurancem And Freight",
+        "value": "CIF"
+      },
+      {
+        "name": "Carriage Paid To",
+        "value": "CPT"
+      },
+      {
+        "name": "Carriage Insurance Paid To",
+        "value": "CIP"
+      },
+      {
+        "name": "Delivered At Terminal",
+        "value": "DAT"
+      },
+      {
+        "name": "Delivered At Place",
+        "value": "DAP"
+      },
+      {
+        "name": "Delivered Duty Paid",
+        "value": "DDP"
+      }
+    ]
   },
   "shipments": {
     "ref": "SHIPMENT REF",

@@ -3,10 +3,12 @@ import { of, Observable } from 'rxjs';
 import { Invoice } from '../interfaces/invoice.interface';
 import { Quote, QuoteStatus } from '../interfaces/quote.interface';
 import { Shipment, ShipmentStatusEnum } from '../interfaces/shipment.interface';
-
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/env/environment';
+const base_url = environment.base_url
 @Injectable()
 export class DashboardService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   getDashboardInfo() {
     const data = {
@@ -80,6 +82,10 @@ export class DashboardService {
     return of(shipments);
   }
 
+
+  sendQuote(formQuote: any): Observable<any> {
+    return this.http.post(`${base_url}/mailer/sendQuote`, formQuote)
+  }
   private randomShipment(ref: string) {
     return {
       id: Math.random(),

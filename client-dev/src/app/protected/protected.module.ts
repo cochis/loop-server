@@ -17,7 +17,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { DialogModule } from 'primeng/dialog';
 import { RadioButtonModule } from 'primeng/radiobutton';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { QuoteServiceComponent } from './pages/quote-service/quote-service.component';
 import { ShipmentRefComponent } from './pages/shipment-ref/shipment-ref.component';
@@ -46,6 +46,7 @@ import { ShipmentRefComponent } from './pages/shipment-ref/shipment-ref.componen
     ToastModule,
     DialogModule,
     RadioButtonModule,
+    ReactiveFormsModule,
   ],
   providers: [DashboardService, ConfirmationService, MessageService],
 })
