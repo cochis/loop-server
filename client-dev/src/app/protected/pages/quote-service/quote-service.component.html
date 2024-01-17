@@ -31,85 +31,85 @@
           </h5>
         </div>
       </div>
-      <form [formGroup]="formQuote" (ngSubmit)="submitQuote()"> 
-      <div class="row">
-        <div class="col-md-4 col-12">
-          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.first_name' | translate }} *"
-          formControlName="first_name"
-          />
+      <form [formGroup]="formQuote" (ngSubmit)="submitQuote()">
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.first_name' | translate }} *"
+              formControlName="first_name" />
+          </div>
+          <div class="col-md-4 col-12">
+            <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.business' | translate }} *"
+              formControlName="business" />
+          </div>
+          <div class="col-md-4 col-12">
+            <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.email' | translate }} *"
+              formControlName="email" />
+          </div>
         </div>
-        <div class="col-md-4 col-12">
-          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.business' | translate }} *"
-          formControlName="business"/>
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.origin' | translate }}"
+              formControlName="origin" />
+          </div>
+          <div class="col-md-4 col-12">
+            <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.destiny' | translate }}"
+              formControlName="destiny" />
+          </div>
+          <div class="col-md-4 col-12">
+            <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.type_merchandise' | translate }}"
+              formControlName="type_merchandise" />
+          </div>
         </div>
-        <div class="col-md-4 col-12">
-          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.email' | translate }} *"
-          formControlName="email"/>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-12">
-          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.origin' | translate }}"
-          formControlName="origin"/>
-        </div>
-        <div class="col-md-4 col-12">
-          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.destiny' | translate }}"
-          formControlName="destiny" />
-        </div>
-        <div class="col-md-4 col-12">
-          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.type_merchandise' | translate }}"
-          formControlName="type_merchandise" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-12">
-          <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.quantity' | translate }}"
-          formControlName="quantity" />
-        </div>
-   
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <input type="text" class="form-control mt-4" placeholder="{{ 'quotes.quantity' | translate }}"
+              formControlName="quantity" />
+          </div>
 
-          <div class="col-md-4 col-12"  >
-            <select class="form-control mt-4" formControlName="type_service"  >
+
+          <div class="col-md-4 col-12">
+            <select class="form-control mt-4" formControlName="type_service">
               <option value="" selected>{{ 'quotes.service' | translate }}</option>
               <ng-container *ngFor="let service of services">
 
-                
-                <option>   {{ "services.service" + service + "_short" | translate | uppercase }}</option>
+
+                <option> {{ "services.service" + service + "_short" | translate | uppercase }}</option>
               </ng-container>
             </select>
           </div>
-     
-        <div class="col-md-4 col-12">
-          <select class="form-control mt-4"  formControlName="incoterm">
-            <option value="" selected>{{ 'quotes.incoterm' | translate }}</option>
-            <option value ="EXW"> Ex Works - EXW</option>
-            <option value ="FCA"> Free Carrier - FCA</option>
-            <option value ="FAS"> Free Alongside Ship - FAS</option>
-            <option value ="FOB"> Free On Board - FOB</option>
-            <option value ="CFR"> Cost And Freight - CFR</option>
-            <option value ="CIF"> Cost, Insurence, and Freight - CIF</option>
-            <option value ="CPT"> Carriage Paid To - CPT</option>
-            <option value ="DAT"> Delivered At Terminal - DAT</option>
-            <option value ="DAP"> Delivered At Place - DAP</option>
-            <option value ="DDP"> Delivered Duty Paid - DDP</option>
-             
-          </select>
+
+          <div class="col-md-4 col-12">
+            <select class="form-control mt-4" formControlName="incoterm">
+              <option value="" selected>{{ 'quotes.incoterm' | translate }}</option>
+              <option value="DAT">{{ 'quotes.DAT' | translate }}</option>
+              <option value="EXW">{{ 'quotes.EXW' | translate }}</option>
+              <option value="FCA">{{ 'quotes.FCA' | translate }}</option>
+              <option value="FAS">{{ 'quotes.FAS' | translate }}</option>
+              <option value="FOB">{{ 'quotes.FOB' | translate }}</option>
+              <option value="CFR">{{ 'quotes.CFR' | translate }}</option>
+              <option value="CIF">{{ 'quotes.CIF' | translate }}</option>
+              <option value="CPT">{{ 'quotes.CPT' | translate }}</option>
+              <option value="CIP">{{ 'quotes.CIP' | translate }}</option>
+              <option value="DAT">{{ 'quotes.DAT' | translate }}</option>
+              <option value="DAP">{{ 'quotes.DAP' | translate }}</option>
+              <option value="DDP">{{ 'quotes.DDP' | translate }}</option>
+
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <textarea class="form-control mt-4" placeholder="{{ 'quotes.special_request' | translate }}"
-          formControlName="special_request"></textarea>
+        <div class="row">
+          <div class="col-12">
+            <textarea class="form-control mt-4" placeholder="{{ 'quotes.special_request' | translate }}"
+              formControlName="special_request"></textarea>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <button  type="submit"
-          class="btn btn-primary w-100"
-          [disabled]="!formQuote.valid" >{{ 'quotes.submit' | translate | uppercase }}</button>
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary w-100" [disabled]="!formQuote.valid">{{ 'quotes.submit' |
+              translate | uppercase }}</button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
 
 
 
@@ -117,7 +117,7 @@
         <div class="col-md-4 col-12">
           <div class="mt-4 card-info">
             <h4>
-              <img src="/assets/img/phone.png"/>
+              <img src="/assets/img/phone.png" />
               {{ 'quotes.phone' | translate | uppercase }}
             </h4>
             <p>
@@ -134,7 +134,7 @@
         <div class="col-md-4 col-12">
           <div class="mt-4 card-info">
             <h4>
-              <img src="/assets/img/email2.png"/>
+              <img src="/assets/img/email2.png" />
               {{ 'quotes.email' | translate | uppercase }}
             </h4>
             <p>
@@ -147,26 +147,18 @@
     </div>
   </div>
 
-  <p-dialog
-    class="confirmation-dialog"
-    [(visible)]="displayConfirmation"
-    [modal]="true"
-    [breakpoints]="{ '960px': '90vw' }"
-    [style]="{ width: '30vw' }"
-    [draggable]="false"
-    [resizable]="false"
-    [closeOnEscape]="false"
-  >
+
+
+
+  <p-dialog class="confirmation-dialog" [(visible)]="displayConfirmation" [modal]="true"
+    [breakpoints]="{ '960px': '90vw' }" [style]="{ width: '30vw' }" [draggable]="false" [resizable]="false"
+    [closeOnEscape]="false">
     <img *ngIf="!isError" src="/assets/img/success.png" class="mb-3" />
     <img *ngIf="isError" src="/assets/img/error.png" class="mb-3" />
     <h3>{{ titleMesasge | uppercase }}</h3>
     <p [innerHTML]="message"></p>
     <hr />
-    <button
-      type="button"
-      class="btn btn-primary w-100"
-      (click)="closeContact()"
-    >
+    <button type="button" class="btn btn-primary w-100" (click)="closeContact()">
       {{ "contact.message_button" | translate | uppercase }}
     </button>
     <hr class="mb-0" />

@@ -19,7 +19,8 @@
     "slide1": "ENVIA <br> AHORA <br> PAGA DESPUÉS",
     "slide2": "MUEVE TU <br> MERCANCIA <br> SIN PREOCUPACIONES",
     "slide3": "MÁS DE 120 <br> DIAS <br> DE CREDITO",
-    "credit_button": "Solicitar Credito"
+    "credit_button": "Solicitar Credito",
+    "more_information": "Más información"
   },
   "about_us": {
     "title": "NOSOTROS",
@@ -228,52 +229,17 @@
     "phone": "TELÉFONO",
     "us": "EUA",
     "service":"Servicio",
-    "incoterms": [
-      {
-        "name": "Ex Works",
-        "value": "EXW"
-      },
-      {
-        "name": "Free Carrier",
-        "value": "FCA"
-      },
-      {
-        "name": "Free Alongside Ship",
-        "value": "FAS"
-      },
-      {
-        "name": "Free On Board",
-        "value": "FOB"
-      },
-      {
-        "name": "Cost And Freight",
-        "value": "CFR"
-      },
-      {
-        "name": "Cost, Insurancem And Freight",
-        "value": "CIF"
-      },
-      {
-        "name": "Carriage Paid To",
-        "value": "CPT"
-      },
-      {
-        "name": "Carriage Insurance Paid To",
-        "value": "CIP"
-      },
-      {
-        "name": "Delivered At Terminal",
-        "value": "DAT"
-      },
-      {
-        "name": "Delivered At Place",
-        "value": "DAP"
-      },
-      {
-        "name": "Delivered Duty Paid",
-        "value": "DDP"
-      }
-    ]
+    "EXW":"En fabrica",
+    "FCA":"Libre transportista",
+    "FAS":"Libre acostado de buque",
+    "FOB":"Libre a bordo",
+    "CFR":"Costo y flete",
+    "CIF":"Costo seguro y flete",
+    "CPT":"Transporte pagado hasta",
+    "CIP":"Transaporte, seguro pagado hasta",
+    "DAT":"Entrega en terminal",
+    "DAP":"Entrega en lugar",
+    "DDP":"Entrega derechos pagados"
   },
   "shipments": {
     "ref": "REFERENCIA DE ENVÍO",

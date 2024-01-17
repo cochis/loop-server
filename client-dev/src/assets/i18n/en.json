@@ -19,7 +19,8 @@
     "slide1": "<b>TRANSPORT <br> NOW</b> <br> <span>PAY LATER</span>",
     "slide2": "<b>MOVE YOUR <br> MERCHANDISE</b> <br> <span>WITHOUT WORRIES</span>",
     "slide3": "<b>UP TO 120 <br> DAYS</b> <br><span> CREDIT</span>",
-    "credit_button": "Learn More"
+    "credit_button": "Learn More",
+    "more_information": "More Information"
   },
   "about_us": {
     "title": "ABOUT US",
@@ -228,52 +229,17 @@
     "phone": "TELEPHONE",
     "us": "US.",
     "service":"Service",
-    "incoterms": [
-      {
-        "name": "Ex Works",
-        "value": "EXW"
-      },
-      {
-        "name": "Free Carrier",
-        "value": "FCA"
-      },
-      {
-        "name": "Free Alongside Ship",
-        "value": "FAS"
-      },
-      {
-        "name": "Free On Board",
-        "value": "FOB"
-      },
-      {
-        "name": "Cost And Freight",
-        "value": "CFR"
-      },
-      {
-        "name": "Cost, Insurancem And Freight",
-        "value": "CIF"
-      },
-      {
-        "name": "Carriage Paid To",
-        "value": "CPT"
-      },
-      {
-        "name": "Carriage Insurance Paid To",
-        "value": "CIP"
-      },
-      {
-        "name": "Delivered At Terminal",
-        "value": "DAT"
-      },
-      {
-        "name": "Delivered At Place",
-        "value": "DAP"
-      },
-      {
-        "name": "Delivered Duty Paid",
-        "value": "DDP"
-      }
-    ]
+    "EXW":"Ex Works",
+    "FCA":"Free Carrier",
+    "FAS":"Free Alongside Ship",
+    "FOB":"Free On Board",
+    "CFR":"Cost And Freight",
+    "CIF":"Cost Insurance And Freight",
+    "CPT":"Carriage Paid To",
+    "CIP":"Carriage Insurance Paid To",
+    "DAT":"Delivered At Terminal",
+    "DAP":"Delivered At Place",
+    "DDP":"Delivered Duty Paid"
   },
   "shipments": {
     "ref": "SHIPMENT REF",
