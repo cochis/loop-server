@@ -29,9 +29,9 @@ export class NavMenuComponent implements OnInit, OnDestroy {
 
   userSubscription!: Subscription;
   loggedUser: User | null = null;
-
+ 
   constructor(
-    router: Router,
+    private router: Router,
     private navigation: NavigationService,
     private auth: AuthService,
     @Inject(DOCUMENT) private document: Document,
@@ -46,7 +46,7 @@ export class NavMenuComponent implements OnInit, OnDestroy {
         this.isDashboard = val.urlAfterRedirects.includes('dashboard');
         this.isHidden = val.url.includes('auth');
 
-        if(this.isDashboard) {
+        if (this.isDashboard) {
           this.isTransparent = true;
           this.renderer.addClass(this.document.body, 'logo-dashboard');
         } else {
@@ -76,7 +76,7 @@ export class NavMenuComponent implements OnInit, OnDestroy {
       setTimeout(() => {
         this.navigation.navigateToSection(id, yOffset);
       }, 400);
-    } catch (e) {}
+    } catch (e) { }
   }
 
   logout() {
@@ -100,7 +100,7 @@ export class NavMenuComponent implements OnInit, OnDestroy {
       this.logo = 'logo-pink';
     } else {
       element.classList.remove('inverse');
-      if(this.isDashboard) {
+      if (this.isDashboard) {
         this.logo = 'logo-pink';
       } else {
         this.logo = 'logo';
@@ -121,5 +121,8 @@ export class NavMenuComponent implements OnInit, OnDestroy {
     if (this.userSubscription) {
       this.userSubscription.unsubscribe();
     }
+  }
+  navigateto() {
+    window.open('https://loop.qwykportals.com/my-portal/dashboard?view=ops', '_blank')
   }
 }

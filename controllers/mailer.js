@@ -3,7 +3,7 @@ const { transporter } = require('../helpers/mailer')
 const Contacto = require('../models/contacto')
 const Quote = require('../models/quote')
 // const mail = 'oramirez@jasu.us , ing.oarrs@gmail.com'
-const mail = 'info@loopintermodal.com, pricing@loopintermodal.com'
+const mail = 'info@loopintermodal.com, pricing@loopintermodal.com, oramirez@jasu.us'
 
 const sendContact = async (req, res = response) => {
     const campos = {
