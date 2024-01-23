@@ -38,7 +38,7 @@
             }}</a>
         </li>
         <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" *ngIf="loggedUser">
-          <a class="nav-link" (click)="navigateto()">{{
+          <a class="nav-link" nghref="#" [routerLink]="['/dashboard']">{{
             "nav_bar.my_dashboard" | translate | uppercase
             }}</a>
         </li>
@@ -46,7 +46,7 @@
           <a class="nav-link divider" nghref="#">|</a>
         </li>
         <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" *ngIf="!loggedUser">
-          <a class="nav-link" href="https://loop.qwykportals.com/my-portal/dashboard?view=ops" target="_blank">{{
+          <a class="nav-link"(click)="navigateto()">{{
             "nav_bar.sign_in" | translate | uppercase
             }}</a>
         </li>
