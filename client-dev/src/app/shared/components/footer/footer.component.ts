@@ -36,5 +36,7 @@ export class FooterComponent implements OnDestroy {
       this.userSubscription.unsubscribe();
     }
   }
-
+  navigateto() {
+    window.open('https://loop.qwykportals.com/my-portal/dashboard?view=ops', '_blank')
+  }
 }
