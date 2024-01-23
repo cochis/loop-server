@@ -4,5 +4,5 @@ export const environment = {
   },
   // base_url: "http://localhost:3030/api",
   // base_url: "http://164.90.254.102:3030/api",
-  base_url: "http://loopintermodal.com/api",
+  base_url: "https://loopintermodal.com/api",
 }
