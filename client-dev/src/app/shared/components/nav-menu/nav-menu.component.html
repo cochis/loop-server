@@ -37,6 +37,11 @@
             "nav_bar.contact" | translate | uppercase
             }}</a>
         </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <a class="nav-link" nghref="#" routerLink="/home/aviso">{{
+            "nav_bar.notice" | translate | uppercase
+            }}</a>
+        </li>
         <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" *ngIf="loggedUser">
           <a class="nav-link" nghref="#" [routerLink]="['/dashboard']">{{
             "nav_bar.my_dashboard" | translate | uppercase
@@ -85,6 +90,11 @@
             <li class="nav-item">
               <a class="nav-link" nghref="#" routerLink="/home/contact">{{
                 "nav_bar.contact" | translate | uppercase
+                }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" nghref="#" routerLink="/home/aviso">{{
+                "nav_bar.notice" | translate | uppercase
                 }}</a>
             </li>
             <li class="nav-item" *ngIf="loggedUser">

@@ -1,0 +1,76 @@
+.info-text {
+    color: #757783;
+  }
+  
+  .email {
+    text-decoration: underline;
+  }
+  
+  .contact-container {
+    margin-top: 60px;
+  }
+  
+  .contact-container .header {
+    background-color: white;
+    background-image: url("/assets/img/logo-dashboard.png");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+  }
+  
+  .contact-container .header h1 {
+    line-height: 88px;
+  }
+  
+  .contact-container .map {
+    background-color: lightblue;
+    height: 275px;
+  }
+  
+  .contact-container .info {
+    background-color: #f4f5f6;
+  }
+  
+  .contact-container .info .office-text {
+    color: var(--color-primary-pink);
+    font-weight: bold;
+    font-size: 22px;
+  }
+  
+  .contact-container .info .form-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 7px;
+  }
+  
+  .contact-container .info .form-container textarea {
+    height: 125px;
+  }
+  
+  .contact-container .info .office-container {
+    margin-bottom: 100px;
+  }
+  
+  @media (min-width: 0px) and (max-width: 991px) {
+    .contact-container .info .office-container {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .padding-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  ::ng-deep .mapboxgl-ctrl-bottom-right {
+    display: none !important;
+  }
+  
+  ::ng-deep .confirmation-dialog .p-dialog-header {
+    display: none !important;
+  }
+  
+  ::ng-deep .confirmation-dialog .p-dialog-content {
+    border-radius: 6px !important;
+    padding-top: 2rem !important;
+  }
+  

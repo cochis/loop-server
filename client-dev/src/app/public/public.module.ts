@@ -18,6 +18,7 @@ import { OfferedServicesComponent } from './pages/offered-services/offered-servi
 import { ContactComponent } from './pages/contact/contact.component';
 import { ContactService } from './pages/contact/services/contact.service';
 import { DialogModule } from 'primeng/dialog';
+import { AvisoComponent } from './pages/aviso/aviso.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DialogModule } from 'primeng/dialog';
     ServicesComponent,
     ValuesComponent,
     OfferedServicesComponent,
-    ContactComponent
+    ContactComponent,
+    AvisoComponent
   ],
   imports: [
     CommonModule,
