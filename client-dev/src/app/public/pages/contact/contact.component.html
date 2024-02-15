@@ -45,8 +45,7 @@
             </span>
             <p class="info-text mb-2">Av. Oaxaca 86 - 1 CDMX, Mexico 06700</p>
             <p class="info-text mb-0">
-              <b>{{ "contact.phone_label" | translate }}:</b> +1 52 (55)
-              68263041
+              <b>{{ "contact.phone_label" | translate }}:</b> +52 (55) 6826 3041
             </p>
             <p class="info-text">
               <b class="me-2">{{ "contact.email_label" | translate }}:</b>
@@ -69,109 +68,57 @@
         <div class="col-md-8 col-12">
           <div class="form-container">
             <form [formGroup]="formContact" (ngSubmit)="submitContact()">
-              <input
-                type="text"
-                class="form-control mb-0"
-                placeholder="{{ 'contact.form.name' | translate }} *"
-                formControlName="name"
-              />
+              <input type="text" class="form-control mb-0" placeholder="{{ 'contact.form.name' | translate }} *"
+                formControlName="name" />
               <div class="divError mb-4">
-                <span
-                  class="font-responsive text-danger"
-                  *ngIf="validator.validFormField(formContact, 'name')"
-                  >{{ "validations.required" | translate }}</span
-                >
+                <span class="font-responsive text-danger" *ngIf="validator.validFormField(formContact, 'name')">{{
+                  "validations.required" | translate }}</span>
               </div>
 
-              <input
-                type="text"
-                class="form-control mb-0"
-                placeholder="{{ 'contact.form.surname' | translate }} *"
-                formControlName="surname"
-              />
+              <input type="text" class="form-control mb-0" placeholder="{{ 'contact.form.surname' | translate }} *"
+                formControlName="surname" />
               <div class="divError mb-4">
-                <span
-                  class="font-responsive text-danger"
-                  *ngIf="validator.validFormField(formContact, 'surname')"
-                  >{{ "validations.required" | translate }}</span
-                >
+                <span class="font-responsive text-danger" *ngIf="validator.validFormField(formContact, 'surname')">{{
+                  "validations.required" | translate }}</span>
               </div>
 
-              <input
-                type="text"
-                class="form-control mb-0"
-                placeholder="{{ 'contact.form.email' | translate }} *"
-                formControlName="email"
-                required 
-              />
+              <input type="text" class="form-control mb-0" placeholder="{{ 'contact.form.email' | translate }} *"
+                formControlName="email" required />
               <div class="divError mb-4">
-                <span
-                  class="font-responsive text-danger"
-                  *ngIf="validator.validFormField(formContact, 'email')"
-                  >{{ "validations.required" | translate }}</span
-                >
+                <span class="font-responsive text-danger" *ngIf="validator.validFormField(formContact, 'email')">{{
+                  "validations.required" | translate }}</span>
               </div>
 
-              <input
-                type="text"
-                class="form-control mb-0"
-                placeholder="{{ 'contact.form.phone' | translate }} *"
-                formControlName="phone"
-              />
+              <input type="text" class="form-control mb-0" placeholder="{{ 'contact.form.phone' | translate }} *"
+                formControlName="phone" />
               <div class="divError mb-4">
-                <span
-                  class="font-responsive text-danger"
-                  *ngIf="validator.validFormField(formContact, 'phone')"
-                  >{{ "validations.required" | translate }}</span
-                >
+                <span class="font-responsive text-danger" *ngIf="validator.validFormField(formContact, 'phone')">{{
+                  "validations.required" | translate }}</span>
               </div>
 
-              <input
-                type="text"
-                class="form-control mb-0"
-                placeholder="{{ 'contact.form.business' | translate }} *"
-                formControlName="business"
-              />
+              <input type="text" class="form-control mb-0" placeholder="{{ 'contact.form.business' | translate }} *"
+                formControlName="business" />
               <div class="divError mb-4">
-                <span
-                  class="font-responsive text-danger"
-                  *ngIf="validator.validFormField(formContact, 'business')"
-                  >{{ "validations.required" | translate }}</span
-                >
+                <span class="font-responsive text-danger" *ngIf="validator.validFormField(formContact, 'business')">{{
+                  "validations.required" | translate }}</span>
               </div>
 
-              <input
-                type="text"
-                class="form-control mb-0"
-                placeholder="{{ 'contact.form.contact_reason' | translate }} *"
-                formControlName="contactReason"
-              />
+              <input type="text" class="form-control mb-0"
+                placeholder="{{ 'contact.form.contact_reason' | translate }} *" formControlName="contactReason" />
               <div class="divError mb-4">
-                <span
-                  class="font-responsive text-danger"
-                  *ngIf="validator.validFormField(formContact, 'contactReason')"
-                  >{{ "validations.required" | translate }}</span
-                >
+                <span class="font-responsive text-danger"
+                  *ngIf="validator.validFormField(formContact, 'contactReason')">{{ "validations.required" | translate
+                  }}</span>
               </div>
 
-              <textarea
-                class="form-control mb-0"
-                placeholder="{{ 'contact.form.reasons' | translate }} *"
-                formControlName="notes"
-              ></textarea>
+              <textarea class="form-control mb-0" placeholder="{{ 'contact.form.reasons' | translate }} *"
+                formControlName="notes"></textarea>
               <div class="divError mb-4">
-                <span
-                  class="font-responsive text-danger"
-                  *ngIf="validator.validFormField(formContact, 'notes')"
-                  >{{ "validations.required" | translate }}</span
-                >
+                <span class="font-responsive text-danger" *ngIf="validator.validFormField(formContact, 'notes')">{{
+                  "validations.required" | translate }}</span>
               </div>
 
-              <button
-                type="submit"
-                class="btn btn-primary w-100"
-                [disabled]="!formContact.valid"
-              >
+              <button type="submit" class="btn btn-primary w-100" [disabled]="!formContact.valid">
                 {{ "contact.form.send" | translate | uppercase }}
               </button>
             </form>
@@ -181,26 +128,15 @@
     </div>
   </div>
 
-  <p-dialog
-    class="confirmation-dialog"
-    [(visible)]="displayConfirmation"
-    [modal]="true"
-    [breakpoints]="{ '960px': '90vw' }"
-    [style]="{ width: '30vw' }"
-    [draggable]="false"
-    [resizable]="false"
-    [closeOnEscape]="false"
-  >
+  <p-dialog class="confirmation-dialog" [(visible)]="displayConfirmation" [modal]="true"
+    [breakpoints]="{ '960px': '90vw' }" [style]="{ width: '30vw' }" [draggable]="false" [resizable]="false"
+    [closeOnEscape]="false">
     <img *ngIf="!isError" src="/assets/img/success.png" class="mb-3" />
     <img *ngIf="isError" src="/assets/img/error.png" class="mb-3" />
     <h3>{{ titleMesasge | uppercase }}</h3>
     <p [innerHTML]="message"></p>
     <hr />
-    <button
-      type="button"
-      class="btn btn-primary w-100"
-      (click)="closeContact()"
-    >
+    <button type="button" class="btn btn-primary w-100" (click)="closeContact()">
       {{ "contact.message_button" | translate | uppercase }}
     </button>
     <hr class="mb-0" />
