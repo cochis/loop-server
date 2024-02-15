@@ -5,7 +5,7 @@ import { environment } from '../../../../env/environment';
 import { TranslateService } from '@ngx-translate/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ValidatorService } from '../../../shared/services/validator.service';
- 
+import { DomSanitizer } from "@angular/platform-browser";
 import { Subscription } from 'rxjs';
 import { ResponseAPI } from '../../../shared/interfaces/response-api.interface';
 
@@ -21,11 +21,12 @@ export class AvisoComponent {
   lat = 26.507855368773555;
   lng = -80.19337591520025;
   displayConfirmation: boolean = false;
-
+  pdf: any
+  lang = ''
   isError: boolean = false;
   titleMesasge: string = '';
   message: string = '';
-
+  file: any
   formContact = this.fb.group({
     name: ['', [Validators.required]],
     surname: ['', [Validators.required]],
@@ -38,15 +39,21 @@ export class AvisoComponent {
 
   constructor(
     public navigation: NavigationService,
-    private translate: TranslateService,
+    public translate: TranslateService,
     private fb: FormBuilder,
     public validator: ValidatorService,
-     
+    private sanitizer: DomSanitizer
   ) {
     navigation.navigateToTop(250);
+    // Select file lang
+    this.pdf = this.sanitizer.bypassSecurityTrustResourceUrl('/assets/docs/' + this.translate.instant('notice.file'));
+    this.lang = this.translate.instant('notice.file')
+
   }
 
   ngOnInit(): void {
+
+
     this.map = new Map({
       accessToken: environment.mapbox.accessToken,
       container: 'map',
@@ -59,6 +66,7 @@ export class AvisoComponent {
 
     const markerTitle = this.translate.instant('contact.marker_title');
 
+
     // US OFFICE
     new Marker({
       color: 'red',
@@ -69,9 +77,8 @@ export class AvisoComponent {
           <h6><b>${markerTitle} - ${this.translate.instant(
           'contact.us_office'
         )}</b></h6>
-          <a href="https://maps.google.com/?q=${this.lat},${
-          this.lng
-        }" target="_blank">Directions</a>
+          <a href="https://maps.google.com/?q=${this.lat},${this.lng
+          }" target="_blank">Directions</a>
         `)
       )
       .addTo(this.map);
@@ -105,6 +112,10 @@ export class AvisoComponent {
         `)
       )
       .addTo(this.map);
+
+
+
+
   }
 
   submitContact() {
@@ -115,11 +126,11 @@ export class AvisoComponent {
     this.message = '';
     this.titleMesasge = '';
 
-     
+
   }
 
   closeContact() {
-    if(!this.isError) {
+    if (!this.isError) {
       this.formContact.reset();
     }
     this.displayConfirmation = false;

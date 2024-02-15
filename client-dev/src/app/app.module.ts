@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavMenuComponent } from './shared/components/nav-menu/nav-menu.component';
 import { NgOptimizedImage } from '@angular/common';
 
+
 @NgModule({
   declarations: [AppComponent, NavMenuComponent],
   imports: [
@@ -28,7 +29,7 @@ import { NgOptimizedImage } from '@angular/common';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);

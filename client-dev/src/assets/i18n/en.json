@@ -9,7 +9,7 @@
     "my_dashboard": "My Dashboard",
     "my_profile": "My profile",
     "sign_out": "Sign out",
-    "notice":"Notice of Privacy"
+    "notice": "Notice of Privacy"
   },
   "tracker": {
     "label": "TRACK YOUR SHIPMENT",
@@ -165,7 +165,7 @@
     "tools_title": "Tools",
     "resources_title": "RESOURCES",
     "contact_option": "CONTACT US",
-    "notice":"Notice of Privacy"
+    "notice": "Notice of Privacy"
   },
   "contact": {
     "title": "Contact us",
@@ -230,18 +230,18 @@
     "submit": "SUBMIT",
     "phone": "TELEPHONE",
     "us": "US.",
-    "service":"Service",
-    "EXW":"Ex Works",
-    "FCA":"Free Carrier",
-    "FAS":"Free Alongside Ship",
-    "FOB":"Free On Board",
-    "CFR":"Cost And Freight",
-    "CIF":"Cost Insurance And Freight",
-    "CPT":"Carriage Paid To",
-    "CIP":"Carriage Insurance Paid To",
-    "DAT":"Delivered At Terminal",
-    "DAP":"Delivered At Place",
-    "DDP":"Delivered Duty Paid"
+    "service": "Service",
+    "EXW": "Ex Works",
+    "FCA": "Free Carrier",
+    "FAS": "Free Alongside Ship",
+    "FOB": "Free On Board",
+    "CFR": "Cost And Freight",
+    "CIF": "Cost Insurance And Freight",
+    "CPT": "Carriage Paid To",
+    "CIP": "Carriage Insurance Paid To",
+    "DAT": "Delivered At Terminal",
+    "DAP": "Delivered At Place",
+    "DDP": "Delivered Duty Paid"
   },
   "shipments": {
     "ref": "SHIPMENT REF",
@@ -278,9 +278,8 @@
     "submit": "Request password reset",
     "subLink": "Return to sign in"
   },
-  "notice":{
-    "title":"Notice of Privacy",
-    "file":"notice-es.pdf"
+  "notice": {
+    "title": "Notice of Privacy",
+    "file": "notice-en.pdf"
   }
- 
 }
