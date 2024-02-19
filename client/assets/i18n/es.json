@@ -8,7 +8,8 @@
     "sign_in": "Inicia Sesión",
     "my_dashboard": "Mi Tablero",
     "my_profile": "Mi Perfil",
-    "sign_out": "Cerrar Sesión"
+    "sign_out": "Cerrar Sesión",
+    "notice":"Aviso de privacidad"
   },
   "tracker": {
     "label": "RASTREA TU ENVÍO",
@@ -163,7 +164,8 @@
   "footer": {
     "tools_title": "Herramientas",
     "resources_title": "Recursos",
-    "contact_option": "CONTACTO"
+    "contact_option": "CONTACTO",
+    "notice":"Aviso de privacidad"
   },
   "contact": {
     "title": "CONTACTO",
@@ -275,5 +277,10 @@
     "input": "Correo electrónico",
     "submit": "Solicitar reinicio de contraseña",
     "subLink": "Regresar al login"
+  },
+  "notice":{
+    "title":"Aviso de privacidad",
+    "file":"notice-es.pdf"
   }
+
 }
