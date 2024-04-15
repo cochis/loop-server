@@ -8,26 +8,28 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavMenuComponent } from './shared/components/nav-menu/nav-menu.component';
 import { NgOptimizedImage } from '@angular/common';
+import { SharedModule } from "./shared/shared.module";
 
 
 @NgModule({
-  declarations: [AppComponent, NavMenuComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgOptimizedImage,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent, NavMenuComponent],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        NgOptimizedImage,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
+        SharedModule
+    ]
 })
 export class AppModule { }
 

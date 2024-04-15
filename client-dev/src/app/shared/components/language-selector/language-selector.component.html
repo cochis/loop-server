@@ -7,13 +7,14 @@
     aria-expanded="false"
     class="black"
   >
-    <img
+    <!-- <img
       [src]="'/assets/img/' + selectedCountry.code.toUpperCase() + '.png'"
       class="flag"
-    />
-    <span class="name-language">{{
+    /> -->
+    <button class="name-language" style="  font-size: 11px;
+    margin-left: 10px;">{{
       selectedCountry.name.toUpperCase()
-    }}</span>
+    }}</button>
   </a>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">

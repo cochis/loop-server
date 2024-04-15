@@ -4,9 +4,15 @@ img.flag {
 }
 
 span.name-language {
-  color: var(--color-white);
+  color: var(--color-black);
+
 }
 
 div.lang-selector {
-  margin-bottom: 40px;
+  margin-left: 80px;
+}
+@media (min-width: 0px) and (max-width: 991px) {
+  div.lang-selector {
+    margin-left: -10px;
+  }
 }

@@ -29,12 +29,12 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   formContact = this.fb.group({
     name: ['', [Validators.required]],
-    surname: ['', [Validators.required]],
+    surname: ['' ],
     email: ['', [Validators.required, Validators.email]],
-    phone: ['', [Validators.required, Validators.minLength(10)]],
+    phone: ['' ],
     business: ['', [Validators.required]],
-    contactReason: ['', [Validators.required]],
-    notes: ['', [Validators.required]],
+    contactReason: ['' ],
+    notes: ['' ],
   });
 
   constructor(

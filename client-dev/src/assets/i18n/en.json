@@ -5,7 +5,7 @@
     "contact": "Contact",
     "tracking": "Tracking",
     "quote": "Quote",
-    "sign_in": "Sign in",
+    "sign_in": "Client Portal",
     "my_dashboard": "My Dashboard",
     "my_profile": "My profile",
     "sign_out": "Sign out",
@@ -151,7 +151,7 @@
     "modal_reject_title": "DECLINE REASON",
     "modal_reject_subtitle": "Please let us know why you declined our quote:",
     "other_radio": "Other",
-    "text_area_placeholder": "Reasons for Return / Notes",
+    "text_area_placeholder": "Message",
     "send_button": "REJECT",
     "repost_button": "REPOST"
   },
@@ -183,7 +183,7 @@
       "phone": "Phone",
       "business": "Business",
       "contact_reason": "Contact Reason",
-      "reasons": "Reasons for Return / Notes",
+      "reasons": "Message",
       "send": "Send"
     },
     "message_button": "Close",

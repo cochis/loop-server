@@ -9,7 +9,14 @@ const sendContact = async (req, res = response) => {
     const campos = {
         ...req.body
     }
-
+    console.log('campos', campos)
+    campos.name=campos.name?campos.name:'N/A'
+    campos.surname=campos.surname?campos.surname:'N/A'
+    campos.email=campos.email?campos.email:'N/A'
+    campos.phone=campos.phone?campos.phone:'N/A'
+    campos.business=campos.business?campos.business:'N/A'
+    campos.contactReason=campos.contactReason?campos.contactReason:'N/A'
+    campos.notes=campos.notes?campos.notes:'N/A'
     const contacto = new Contacto({
         ...campos
     })
@@ -63,11 +70,7 @@ const sendContact = async (req, res = response) => {
                 <td>${campos.business}</td>
 
             </tr>
-            <tr>
-                <th scope="row">Contact Reason</th>
-                <td>${campos.contactReason}</td>
-
-            </tr>
+            
             <tr>
                 <th scope="row">Notes</th>
                 <td>${campos.notes}</td>

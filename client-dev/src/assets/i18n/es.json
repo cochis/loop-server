@@ -5,7 +5,7 @@
     "contact": "Contacto",
     "tracking": "Rastreo",
     "quote": "Cotización",
-    "sign_in": "Inicia Sesión",
+    "sign_in": "Portal Cliente",
     "my_dashboard": "Mi Tablero",
     "my_profile": "Mi Perfil",
     "sign_out": "Cerrar Sesión",
@@ -151,7 +151,7 @@
     "modal_reject_title": "MOTIVO DE RECHAZO",
     "modal_reject_subtitle": "Háganos saber por qué rechazó nuestra cotización:",
     "other_radio": "Otro",
-    "text_area_placeholder": "Motivos de devolución / Notas",
+    "text_area_placeholder": "Mensaje",
     "send_button": "RECHAZAR",
     "repost_button": "VOLVER A PUBLICAR"
   },
@@ -183,7 +183,7 @@
       "phone": "Teléfono",
       "business": "Negocio",
       "contact_reason": "Motivo de contacto",
-      "reasons": "Motivos de devolución / Notas",
+      "reasons": "Mensaje",
       "send": "Enviar"
     },
     "message_button": "Cerrar",

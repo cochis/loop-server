@@ -16,6 +16,8 @@
 
   <div class="map" id="map"></div>
 
+ 
+
   <div class="info padding-50">
     <div class="container">
       <div class="row">
@@ -32,25 +34,20 @@
               <b>{{ "contact.phone_label" | translate }}:</b>
               +1 (305) 564 1315
             </p>
-            <p class="info-text">
-              <b class="me-2">{{ "contact.email_label" | translate }}:</b>
-              <span class="email">info@loopintermodal.com</span>
-            </p>
+           
           </div>
 
           <div class="office-container">
             <span class="block office-text">
               <img src="/assets/img/map-marker.png" />
+              
               {{ "contact.mexico_office" | translate | uppercase }}
             </span>
             <p class="info-text mb-2">Av. Oaxaca 86 - 1 CDMX, Mexico 06700</p>
             <p class="info-text mb-0">
               <b>{{ "contact.phone_label" | translate }}:</b> +52 (55) 6826 3041
             </p>
-            <p class="info-text">
-              <b class="me-2">{{ "contact.email_label" | translate }}:</b>
-              <span class="email">info@loopintermodal.com</span>
-            </p>
+            
           </div>
 
           <div class="office-container">
@@ -63,7 +60,25 @@
               {{ "contact.spain_label" | translate }}
             </p>
           </div>
+          <div class="office-container  ">
+            <div class="container">
+              <p class="info-text" style="text-align: center;">
+                
+       
+                <span class="card-info " >
+                  <h4  style="color:#e81f76">
+                    <img src="/assets/img/email2.png" />
+                    {{ 'quotes.email' | translate | uppercase }}
+                  </h4>
+                  <a href="mailto:info@loopintermodal.com" style="color: #757783;">info&#64;loopintermodal.com</a>
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
+
+
+        
         <div class="col-md-1 col-12">&nbsp;</div>
         <div class="col-md-8 col-12">
           <div class="form-container">
@@ -75,7 +90,7 @@
                   "validations.required" | translate }}</span>
               </div>
 
-              <input type="text" class="form-control mb-0" placeholder="{{ 'contact.form.surname' | translate }} *"
+              <input type="text" class="form-control mb-0" placeholder="{{ 'contact.form.surname' | translate }} "
                 formControlName="surname" />
               <div class="divError mb-4">
                 <span class="font-responsive text-danger" *ngIf="validator.validFormField(formContact, 'surname')">{{
@@ -89,7 +104,7 @@
                   "validations.required" | translate }}</span>
               </div>
 
-              <input type="text" class="form-control mb-0" placeholder="{{ 'contact.form.phone' | translate }} *"
+              <input type="text" class="form-control mb-0" placeholder="{{ 'contact.form.phone' | translate }} "
                 formControlName="phone" />
               <div class="divError mb-4">
                 <span class="font-responsive text-danger" *ngIf="validator.validFormField(formContact, 'phone')">{{
@@ -103,15 +118,15 @@
                   "validations.required" | translate }}</span>
               </div>
 
-              <input type="text" class="form-control mb-0"
+              <!-- <input type="text" class="form-control mb-0"
                 placeholder="{{ 'contact.form.contact_reason' | translate }} *" formControlName="contactReason" />
               <div class="divError mb-4">
                 <span class="font-responsive text-danger"
                   *ngIf="validator.validFormField(formContact, 'contactReason')">{{ "validations.required" | translate
                   }}</span>
-              </div>
+              </div> -->
 
-              <textarea class="form-control mb-0" placeholder="{{ 'contact.form.reasons' | translate }} *"
+              <textarea class="form-control mb-0" placeholder="{{ 'contact.form.reasons' | translate }} "
                 formControlName="notes"></textarea>
               <div class="divError mb-4">
                 <span class="font-responsive text-danger" *ngIf="validator.validFormField(formContact, 'notes')">{{
