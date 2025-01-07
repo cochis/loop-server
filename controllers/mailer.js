@@ -76,6 +76,16 @@ const sendContact = async (req, res = response) => {
                 <td>${campos.notes}</td>
 
             </tr>
+            <tr>
+                <th scope="row">Terminos Aceptados</th>
+                <td>${campos.acceptTerms1}</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Envio de SMS</th>
+                <td>${campos.acceptTerms2}</td>
+
+            </tr>
 
         </tbody>
     </table>
@@ -140,6 +150,11 @@ const sendQuote = async (req, res = response) => {
         <td>${campos.email}</td>
 
     </tr>
+     <tr>
+                <th scope="row">Phone</th>
+                <td>${campos.phone}</td>
+
+            </tr>
     <tr>
         <th scope="row">Origin</th>
         <td>${campos.origin}</td>

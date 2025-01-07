@@ -9,7 +9,7 @@
     "my_dashboard": "My Dashboard",
     "my_profile": "My profile",
     "sign_out": "Sign out",
-    "notice": "Notice of Privacy"
+    "notice": "Privacy Policy"
   },
   "tracker": {
     "label": "TRACK YOUR SHIPMENT",
@@ -104,7 +104,9 @@
   },
   "validations": {
     "required": "This field is required",
-    "accept_terms_and_conditions": "You need to agree the terms of service before continue."
+    "accept_terms_and_conditions": "You need to agree the terms of service before continue.",
+    "accept_privacy1":"By Checking| this checkbox , I hereby provide my express consent to receive text messages in accordance with our Privacy Policy from LoopIntermodal.",
+    "accept_privacy2":"I understand that upon submission of this form, I may opt out of receiving  further text messages at any time by replying STOP."
   },
   "dashboard": {
     "welcome_title": "GOOD AFTERNOON",
@@ -165,7 +167,7 @@
     "tools_title": "Tools",
     "resources_title": "RESOURCES",
     "contact_option": "CONTACT US",
-    "notice": "Notice of Privacy"
+    "notice": "Privacy Policy"
   },
   "contact": {
     "title": "Contact us",
@@ -181,7 +183,7 @@
       "surname": "Surname",
       "email": "E-mail",
       "phone": "Phone",
-      "business": "Business",
+      "business": "Company Name",
       "contact_reason": "Contact Reason",
       "reasons": "Message",
       "send": "Send"
@@ -218,7 +220,7 @@
     "subtitle": "Tell us a little more about the service you require and we will contact you shortly to share a quote.",
     "how_help": "HOW CAN WE HELP YOU?",
     "first_name": "First name",
-    "business": "Business",
+    "business": "Company Name",
     "email": "E-mail",
     "origin": "Origin",
     "destiny": "Destination",
@@ -229,6 +231,7 @@
     "special_request": "Do you have any special request?",
     "submit": "SUBMIT",
     "phone": "TELEPHONE",
+    "phone_f": "Telephone",
     "us": "US.",
     "service": "Service",
     "EXW": "Ex Works",
@@ -279,7 +282,7 @@
     "subLink": "Return to sign in"
   },
   "notice": {
-    "title": "Notice of Privacy",
+    "title": "Privacy Policy",
     "file": "notice-en.pdf"
   }
 }

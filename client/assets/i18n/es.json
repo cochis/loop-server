@@ -93,7 +93,7 @@
       "desc5": "Informes",
       "full_name": "Nombre Completo",
       "email_address": "Dirección de correo electrónico",
-      "company_name": "Nombre de Empresa",
+      "company_name": "Compañía",
       "job_title": "Título profesional",
       "location": "Ubicación",
       "country": "País",
@@ -104,7 +104,9 @@
   },
   "validations": {
     "required": "Este campo es requerido",
-    "accept_terms_and_conditions": "Debe aceptar los términos del servicio antes de continuar."
+    "accept_terms_and_conditions": "Debe aceptar los términos del servicio antes de continuar.",
+    "accept_privacy1":"Al marcar esta casilla, doy mi consentimiento expreso para recibir mensajes de texto de acuerdo con nuestra Política de privacidad de LoopIntermodal. ",
+    "accept_privacy2":"Entiendo que, al enviar este formulario, puedo optar por no recibir más mensajes de texto en cualquier momento respondiendo STOP."
   },
   "dashboard": {
     "welcome_title": "BUENAS TARDES",
@@ -181,7 +183,7 @@
       "surname": "Apellido(s)",
       "email": "Correo electrónico",
       "phone": "Teléfono",
-      "business": "Negocio",
+      "business": "Compañia",
       "contact_reason": "Motivo de contacto",
       "reasons": "Mensaje",
       "send": "Enviar"
@@ -199,7 +201,7 @@
     "warning_subtitle": "Algunos campos no se pueden cambiar desde esta pantalla.",
     "full_name": "Nombre Completo",
     "email": "Correo electrónico",
-    "company_name": "Nombre de Empresa",
+    "company_name": "Compañía",
     "job_title": "Título profesional",
     "location": "Ubicación",
     "country": "País",
@@ -218,7 +220,7 @@
     "subtitle": "Cuéntanos un poco más sobre el servicio que requieres y en breve nos pondremos en contacto contigo para compartirte una cotización.",
     "how_help": "¿COMO PODEMOS AYUDARTE?",
     "first_name": "Nombre",
-    "business": "Nombre de empresa",
+    "business": "Compañia",
     "email": "Correo electrónico",
     "origin": "Origen",
     "destiny": "Destino",
@@ -229,6 +231,7 @@
     "special_request": "¿Tienes alguna petición especial?",
     "submit": "ENVIAR",
     "phone": "TELÉFONO",
+    "phone_f": "Teléfono",
     "us": "EUA",
     "service":"Servicio",
     "EXW":"En fabrica",
